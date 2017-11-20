@@ -1,4 +1,4 @@
-<%= simple_form_for @friend_requests  do |f| %>
-  <%= f.input :content, placeholder: "Your review", label: false %>
-  <%= f.submit "Make review", class: "btn btn-primary" %>
+<%= simple_form_for [@profile, @friend_request], url: profile_friend_requests_path(@profile)  do |f| %>
+  <%= f.input :request_message %>
+  <%= f.submit "Make contact", class: "btn btn-primary" %>
 <% end %>

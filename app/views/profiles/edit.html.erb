@@ -1,2 +1,10 @@
-<h1>Profiles#edit</h1>
-<p>Find me in app/views/profiles/edit.html.erb</p>
+<%= simple_form_for @profile, url: profile_path(@profile) do |f| %>
+  <%= f.hidden_field :first_name %>
+  <%= f.hidden_field :last_name %>
+  <%= f.hidden_field :email %>
+  <%= f.input :bio %>
+  <%= f.input :motivation %>
+  <%= f.input :location %>
+  <%= f.input :phone_number %>
+  <%= f.submit "Submit", class: "btn btn-primary btn-block" %>
+<% end %>
