@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'index', to: 'friend_requests#index'
 
+  get 'pages/design_test', to: 'pages#design_test'
+
   devise_for :users
 
   root to: 'pages#home'

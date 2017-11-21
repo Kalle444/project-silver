@@ -2,6 +2,7 @@ puts "Deleting the database..."
 
 User.destroy_all
 Interest.destroy_all
+#potentially add FriendRequest.destroy_all
 
 puts "Seeding the database"
 
@@ -78,7 +79,9 @@ singing = Interest.create(name: "singing".capitalize, icon_path: "interest_icons
 golf = Interest.create(name: "golf".capitalize, icon_path: "interest_icons/golf.png" )
 dogs = Interest.create(name: "dogs".capitalize, icon_path: "interest_icons/dog.png" )
 
+
 #-----------------------------------------Assigning Interests to Users----------------------------------------------
+
 
 UserInterest.create(user: john, interest: soccer)
 UserInterest.create(user: john, interest: chess)
