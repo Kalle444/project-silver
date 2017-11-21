@@ -11,6 +11,9 @@ gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
+#google omniauth
+gem 'omniauth-google-oauth2'
+
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
