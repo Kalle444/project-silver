@@ -1,1 +1,37 @@
-<h1>Design Test Page</h1>
+<div class="show-slider">
+  <%= image_tag("filter-slider.svg", class: "slider-icon") %>
+  <h6>Filters</h6>
+</div>
+<div class="slider-window">
+  <div class="hide-slider">
+    <%= image_tag("filter-slider-white.svg", class: "slider-icon") %>
+    <!-- <h5>Hide Filters</h5> -->
+  </div>
+  <div class="filter-window">
+
+  </div>
+</div>
+
+
+
+
+
+<script>
+  const slider = document.querySelector(".hide-slider");
+  const sliderShow = document.querySelector(".show-slider");
+  const filterWindow = document.querySelector(".slider-window");
+
+  function hideFilterWindow() {
+    sliderShow.style.display = "flex";
+    filterWindow.style.transform = "translateX(-100%)";
+
+  };
+
+  function showFilterWindow() {
+    filterWindow.style.transform = "none";
+    sliderShow.style.display = "none";
+  };
+
+  slider.addEventListener("click", hideFilterWindow);
+  sliderShow.addEventListener("click", showFilterWindow);
+</script>
