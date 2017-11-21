@@ -1,0 +1,7 @@
+<h1>UserInterests#new</h1>
+<p>Find me in app/views/user_interests/new.html.erb</p>
+
+<%= simple_form_for @user_interest do |f| %>
+<%= f.association :interest %>
+<%= f.submit %>
+<% end %>
