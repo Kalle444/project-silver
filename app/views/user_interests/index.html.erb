@@ -1,9 +1,13 @@
-<h1>These are all the interests of <%= current_user.first_name %>:</h1>
-
-<% @user_interests.each do |user_interest| %>
-<ul>
-  <li><%= user_interest.interest.name %>
-    <%= link_to("destroy", user_interest_path(user_interest), method: :delete) %>
-  </li>
-</ul>
-<% end %>
+<div class="container">
+  <h1>These are all the interests of <%= current_user.first_name %>:</h1>
+  <div class="interest-cards">
+    <% @user_interests.each do |user_interest| %>
+      <div class="interest-card">
+          <h5><%= user_interest.interest.name %></h5>
+          <%= image_tag(user_interest.interest.icon_path, class: "interest_icon") %>
+          <p><%= link_to("destroy", user_interest_path(user_interest), method: :delete) %></p>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to("Add a new interest", new_user_interest_path) %>
+</div>

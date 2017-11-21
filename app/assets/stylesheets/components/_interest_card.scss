@@ -1,0 +1,17 @@
+.interest-cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.interest_icon {
+  width: 60px;
+}
+
+.interest-card {
+  border: 1px solid black;
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  margin: 15px;
+}
+
