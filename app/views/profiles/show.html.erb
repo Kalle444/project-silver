@@ -6,6 +6,14 @@
 <%= @profile.bio %>
 <%= @profile.motivation %>
 
+<% if @profile.background_picture? %>
+  <%= cl_image_tag @profile.background_picture.path, width: 200, height: 300, crop: :fill %>
+<% end %>
+
+<% if @profile.profile_picture? %>
+  <%= cl_image_tag @profile.profile_picture.path, width: 200, height: 300, crop: :fill %>
+<% end %>
+
 <%= link_to "edit", edit_profile_path(@profile) %>
 
 <%= link_to "Make contact", new_profile_friend_request_path(@profile) %>
