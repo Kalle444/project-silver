@@ -5,6 +5,11 @@ ruby '2.3.5'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 
+#Cloudinary
+gem 'cloudinary'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
 
 gem 'devise'
 gem 'figaro'
