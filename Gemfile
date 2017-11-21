@@ -13,8 +13,6 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
-gem 'better_errors'
-gem 'binding_of_caller'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
