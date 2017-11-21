@@ -10,7 +10,7 @@ class UserInterestsController < ApplicationController
   def create
     @user_interest = UserInterest.new(user_interest_params)
     @user_interest.user = current_user
-    @user_interest.save!
+    @user_interest.save
     redirect_to(user_interests_path)
   end
 
