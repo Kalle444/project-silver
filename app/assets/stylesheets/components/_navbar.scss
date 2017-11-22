@@ -1,10 +1,11 @@
-/* Show it is fixed to the top */
-body {
-  // min-height: 75rem;
-  // padding-top: 4.5rem;
+.img-circle {
+  margin-bottom: 10px;
+  padding: 0px;
+  border-radius: 50%!important;
+  max-width: 100%;
 }
 
 #hello {
-    margin: -20px 0px;
-    height: 40px;
+  margin: -20px 0px;
+  height: 40px;
 }
