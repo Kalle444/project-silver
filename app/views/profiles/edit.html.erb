@@ -2,9 +2,11 @@
   <%= f.hidden_field :first_name %>
   <%= f.hidden_field :last_name %>
   <%= f.hidden_field :email %>
+  <%= f.input :profile_picture, as: :attachinary %>
+  <%= f.input :phone_number %>
   <%= f.input :bio %>
   <%= f.input :motivation %>
   <%= f.input :location %>
-  <%= f.input :phone_number %>
+  <%= f.input :background_picture, as: :attachinary %>
   <%= f.submit "Submit", class: "btn btn-primary btn-block" %>
 <% end %>
