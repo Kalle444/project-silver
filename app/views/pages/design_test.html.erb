@@ -1,1 +1,53 @@
-<h1>Design Test Page</h1>
+<div class="filter-bar">
+  <div class="show-slider">
+    <%= image_tag("filter-slider.svg", class: "slider-icon") %>
+    <h6>Show Filters</h6>
+  </div>
+  <div class="hide-slider">
+    <%= image_tag("filter-slider-white.svg", class: "slider-icon") %>
+    <i class="fa fa-arrow-left arrow-left" aria-hidden="true"></i>
+  </div>
+  <div class="search-container">
+    <i class="fa fa-globe white-icon" aria-hidden="true"></i>
+    <h6>Search for location:</h6>
+    <input type="text" id="location-search">
+  </div>
+</div>
+
+<div class="body-content">
+  <div class="slider-window">
+    <div class="filter-window">
+        <h5>Maximal distance</h5>
+        <input type="range" min="1" max="50" value="25" class="range" id="myRange">
+      <i class="fa fa-globe" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="green-box"></div>
+  </div>
+</div>
+
+<script>
+  const sliderHide = document.querySelector(".hide-slider");
+  const sliderShow = document.querySelector(".show-slider");
+  const filterWindow = document.querySelector(".slider-window");
+  const overlay = document.querySelector(".overlay");
+  const cards = document.querySelector(".card-body");
+
+  function hideFilterWindow() {
+    sliderShow.style.display = "flex";
+    sliderHide.style.display= "none";
+    filterWindow.style.transform = "translateX(-300px)";
+    cards.style.transform = "translateX(-300px)";
+  };
+
+  function showFilterWindow() {
+    sliderHide.style.display= "flex";
+    sliderShow.style.display = "none";
+    filterWindow.style.transform = "none";
+    cards.style.transform = "none";
+  };
+
+    sliderHide.addEventListener("click", hideFilterWindow);
+    sliderShow.addEventListener("click", showFilterWindow);
+  </script>
