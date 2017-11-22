@@ -4,8 +4,10 @@
   display: flex;
 }
 
-.banner h1, p {
-  color: white;
+.banner{
+  h1, p {
+    color: white;
+  }
 }
 
 .banner {
@@ -18,3 +20,4 @@
     font-size: 35px;
   }
 }
+
