@@ -1,12 +1,43 @@
-<%= simple_form_for @profile, url: profile_path(@profile) do |f| %>
-  <%= f.hidden_field :first_name %>
-  <%= f.hidden_field :last_name %>
-  <%= f.hidden_field :email %>
-  <%= f.input :profile_picture, as: :attachinary %>
-  <%= f.input :phone_number %>
-  <%= f.input :bio %>
-  <%= f.input :motivation %>
-  <%= f.input :location %>
-  <%= f.input :background_picture, as: :attachinary %>
-  <%= f.submit "Submit", class: "btn btn-primary btn-block" %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 offset-sm-3">
+      <div class="form_profile_update">
+        <%= simple_form_for @profile, url: profile_path(@profile) do |f| %>
+        <%= f.hidden_field :first_name %>
+        <%= f.hidden_field :last_name %>
+        <%= f.hidden_field :email %>
+        <%= f.input :profile_picture, as: :attachinary %>
+        <%= f.input :phone_number %>
+        <%= f.input :bio %>
+        <%= f.input :motivation %>
+        <%= f.input :location %>
+        <%= f.input :background_picture, as: :attachinary %>
+        <div class="form-group">
+          <label class="control-label check_boxes optional">Interest</label>
+          <input type="hidden" name="user[interest_ids][]" value="">
+          <div class="interest-choices">
+            <% Interest.all.each do |interest| %>
+              <input type="checkbox" class="invisible"  value="<%= interest.id %>" name="user[interest_ids][]"
+              id="user_interest_ids_<%= interest.id %>">
+              <label class="interest-choice" for="user_interest_ids_<%= interest.id %>">
+                <%= interest.name %> <hr style="margin-bottom: 0; margin-top:0">
+                <%= image_tag(interest.icon_path, class: "interest_icon") %>
+              </label>
+            <% end %>
+          </div>
+        </div>
+        <%= f.submit "Update", class: "btn btn-primary btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for(:after_js) do %>
+  <script type="text/javascript">
+      $(".interest-choice").click(function(){
+        $(this).toggleClass("active");
+      });
+  </script>
 <% end %>
+
