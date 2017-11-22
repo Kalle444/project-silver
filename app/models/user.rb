@@ -11,7 +11,9 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
-
+  #for geocoding
+  geocoded_by(:location)
+  after_validation(:geocode, if: :location_changed?)
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

@@ -1,8 +1,88 @@
-<h1>All profiles</h1>
+<div class="filter-bar">
+  <div class="show-slider">
+    <%= image_tag("filter-slider.svg", class: "slider-icon") %>
+    <h6>Show Filters</h6>
+  </div>
+  <div class="hide-slider">
+    <%= image_tag("filter-slider-white.svg", class: "slider-icon") %>
+    <i class="fa fa-arrow-left arrow-left" aria-hidden="true"></i>
+  </div>
+  <div class="search-container">
+    <i class="fa fa-globe white-icon" aria-hidden="true"></i>
+    <h6>Enter your location:</h6>
+    <form name="location" action="/profiles" method="get" id="location-form">
+      <input name="location" type="text" id="location-search" placeholder="Rådmandsgade 15, Copenhagen">
+      <input type="submit" value="Search">
+    </form>
+    <h6 id="location-value"></h6>
+  </div>
+</div>
+
+<div class="body-content">
+  <div class="slider-window">
+    <div class="filter-window">
+        <h5>Maximal distance</h5>
+        <form name="radius" action="/profiles" method="get" id="radius-form">
+          <input  type="range" min="1" max="50" value="25" class="range" step="5" id="set-radius">
+          <input type="submit" value="Change radius">
+        </form>
+        <h5 id="showValue"></h5>
+      <i class="fa fa-globe" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="card-body">
+    <% @profiles.each do |profile| %>
+    <ul>
+      <li><%= profile.first_name %><%= profile.location%></li>
+      </ul>
+    <% end %>
+  </div>
+</div>
+
+<script>
+
+// ------------- SHOW AND HIDE FILTER------------------------
+  const sliderHide = document.querySelector(".hide-slider");
+  const sliderShow = document.querySelector(".show-slider");
+  const filterWindow = document.querySelector(".slider-window");
+  const overlay = document.querySelector(".overlay");
+  const cards = document.querySelector(".card-body");
+  // const rangeValue = document.querySelector("#myrange").value
+  // const showValue = document.querySelector("#showValue")
+
+  function hideFilterWindow() {
+    sliderShow.style.display = "flex";
+    sliderHide.style.display= "none";
+    filterWindow.style.transform = "translateX(-300px)";
+    cards.style.transform = "translateX(-300px)";
+  };
+
+  function showFilterWindow() {
+    sliderHide.style.display= "flex";
+    sliderShow.style.display = "none";
+    filterWindow.style.transform = "none";
+    cards.style.transform = "none";
+  };
+
+  sliderHide.addEventListener("click", hideFilterWindow);
+  sliderShow.addEventListener("click", showFilterWindow);
+
+// ---------------------------GOOGLE MAPS AUTOCOMPLETE-------------------------
 
 
-<% @profiles.each do |profile| %>
-  <h3><%= "#{profile.first_name} #{profile.last_name}  #{profile.email}" %></h3>
-  <%= link_to "show", profile_path(profile) %>
-<% end %>
+const addressSearch = document.querySelector("#location-search");
+const locationValue = document.querySelector("#location-value");
 
+function onPlaceChanged() {
+  var place = this.getPlace();
+  var listAddress = document.getElementById('location-search');
+}
+document.addEventListener("DOMContentLoaded", function() {
+  var listAddress = document.getElementById('location-search');
+  if (listAddress) {
+    var autocomplete = new google.maps.places.Autocomplete(listAddress, { types: ['geocode'] });
+    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+  }
+});
+
+</script>

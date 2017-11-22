@@ -58,7 +58,7 @@ meryl = User.create(first_name: "Meryl", last_name: "Streep", email: "meryl@gmai
 jeffrey = User.create(first_name: "Jeffrey", last_name: "Tambor", email: "jeffrey@gmail.com", password: "123456",
   bio: "Born in 1944 in San Francisco, California, I got my start in the industry after taking acting classes as an adolescent. I went on to study acting at Wayne State University, later teaching theater at my alma mater. In 1981, Tambor found recurring work playing different characters on the popular series Three's Company and its spin-off The Ropers. From there, I starred on several television series before landing one of his biggest roles: playing Hank Kingsley on The Larry Sanders Show (1992-98). After the show's six-year run, I returned to the spotlight with a featured part on the popular TV comedy Arrested Development (2003-06, 2013) and the online series Transparent (2014), for which I have won a Golden Globe and multiple Emmys.",
   motivation: "",
-  location: "Indre By, Kopenhagen",
+  location: "Elbchaussee 251, Hamburg, Germany",
   young: false)
 
 #------------------------------------------------Interests----------------------------------------------------
