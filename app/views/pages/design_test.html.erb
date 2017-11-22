@@ -9,8 +9,12 @@
   </div>
   <div class="search-container">
     <i class="fa fa-globe white-icon" aria-hidden="true"></i>
-    <h6>Search for location:</h6>
-    <input type="text" id="location-search">
+    <h6>Enter your location:</h6>
+    <form action="/profiles" method="get" id="location-form">
+      <input name="location" type="text" id="location-search" placeholder="Rådmandsgade 15, Copenhagen">
+      <input type="submit" value="Search">
+    </form>
+    <h6 id="location-value"></h6>
   </div>
 </div>
 
@@ -18,39 +22,30 @@
   <div class="slider-window">
     <div class="filter-window">
         <h5>Maximal distance</h5>
-        <input type="range" min="1" max="50" value="25" class="range" id="myRange">
+        <input type="range" min="1" max="50" value="25" class="range" id="myRange" step="5">
+        <h5 id="showValue"></h5>
       <i class="fa fa-globe" aria-hidden="true"></i>
     </div>
   </div>
   <div class="card-body">
-    <div class="green-box"></div>
+  <% 10.times do %>
+    <div class="row profile-cards">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card profile-card">
+
+          <div class="profile-card-body">
+            <h4 class="profile-card-first-name">Jane Smith</h4>
+            <h6 class="profile-card-interests">WALKING | READING</h6>
+
+            <!-- TODO: Limit Descrition below to 80 characters, end with ... -->
+            <p class="profile-card-description">Dreamcatcher do tote bag hoodie four dollar  pinterest raw denim paleo commodo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
-
-<script>
-  const sliderHide = document.querySelector(".hide-slider");
-  const sliderShow = document.querySelector(".show-slider");
-  const filterWindow = document.querySelector(".slider-window");
-  const overlay = document.querySelector(".overlay");
-  const cards = document.querySelector(".card-body");
-
-  function hideFilterWindow() {
-    sliderShow.style.display = "flex";
-    sliderHide.style.display= "none";
-    filterWindow.style.transform = "translateX(-300px)";
-    cards.style.transform = "translateX(-300px)";
-  };
-
-  function showFilterWindow() {
-    sliderHide.style.display= "flex";
-    sliderShow.style.display = "none";
-    filterWindow.style.transform = "none";
-    cards.style.transform = "none";
-  };
-
-    sliderHide.addEventListener("click", hideFilterWindow);
-    sliderShow.addEventListener("click", showFilterWindow);
-  </script>
 <div class="sample-card">
   <div class="profile-tile">
 
@@ -73,3 +68,57 @@
     </div>
 
   </div>
+
+<script>
+
+// ------------- SHOW AND HIDE FILTER------------------------
+  const sliderHide = document.querySelector(".hide-slider");
+  const sliderShow = document.querySelector(".show-slider");
+  const filterWindow = document.querySelector(".slider-window");
+  const overlay = document.querySelector(".overlay");
+  const cards = document.querySelector(".card-body");
+  // const rangeValue = document.querySelector("#myrange").value
+  // const showValue = document.querySelector("#showValue")
+
+  function hideFilterWindow() {
+    sliderShow.style.display = "flex";
+    sliderHide.style.display= "none";
+    filterWindow.style.transform = "translateX(-300px)";
+    cards.style.transform = "translateX(-300px)";
+  };
+
+  function showFilterWindow() {
+    sliderHide.style.display= "flex";
+    sliderShow.style.display = "none";
+    filterWindow.style.transform = "none";
+    cards.style.transform = "none";
+  };
+
+  sliderHide.addEventListener("click", hideFilterWindow);
+  sliderShow.addEventListener("click", showFilterWindow);
+
+// ---------------------------GOOGLE MAPS AUTOCOMPLETE-------------------------
+
+
+const addressSearch = document.querySelector("#location-search");
+const locationValue = document.querySelector("#location-value");
+
+function onPlaceChanged() {
+  var place = this.getPlace();
+  var listAddress = document.getElementById('location-search');
+}
+document.addEventListener("DOMContentLoaded", function() {
+  var listAddress = document.getElementById('location-search');
+  if (listAddress) {
+    var autocomplete = new google.maps.places.Autocomplete(listAddress, { types: ['geocode'] });
+    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+  }
+});
+
+document.getElementById('location-form').addEventListener('submit', function(evt){
+    evt.preventDefault();
+    locationValue.innerText = addressSearch.value;
+    addressSearch.value = "";
+})
+
+</script>

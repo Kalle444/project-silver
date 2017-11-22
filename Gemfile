@@ -14,6 +14,9 @@ gem 'coffee-rails'
 #google omniauth
 gem 'omniauth-google-oauth2'
 
+#geocoding
+gem 'geocoder'
+
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
