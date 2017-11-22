@@ -1,8 +1,6 @@
 <h1>All profiles</h1>
 
-
 <% @profiles.each do |profile| %>
-  <h3><%= "#{profile.first_name} #{profile.last_name}  #{profile.email}" %></h3>
-  <%= link_to "show", profile_path(profile) %>
+<h3><%= "#{profile.first_name} #{profile.last_name}  #{profile.email}" %></h3>
+<%= link_to "show", profile_path(profile) %>
 <% end %>
-
