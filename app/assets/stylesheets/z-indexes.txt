@@ -1,0 +1,3 @@
+Overview over all z-indexes
+navbar: 10
+filter-window: 5
