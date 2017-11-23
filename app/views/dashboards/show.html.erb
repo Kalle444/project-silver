@@ -1,39 +1,57 @@
-<%= cl_image_tag current_user.background_picture.path,crop: :fill, class: "background-image w-100" %>
 
 
 <div class="dashboard-profile-box">
 
   <div class="dashboard-profile_avatar">
-    <%= cl_image_tag current_user.profile_picture.path, class: "rounded-circle dashboard-profile-img" %>
+    <%= cl_image_tag current_user.profile_picture.path, class: "dashboard-profile-img" %>
   </div>
 
   <div class="dashboard-profile_info">
-    <%= "#{current_user.first_name} #{current_user.last_name}" %>
-    <%= "Address:" %>
-    <%= "#{current_user.location}" %>
-    <%= "Phone number:" %>
-    <%= "#{current_user.location}" %>
+    <h2>  <%= "#{current_user.first_name} #{current_user.last_name}" %></h2>
+    <h4> <%= "Address:"%></h4>
+    <p> <%= "#{current_user.location}" %></p>
+    <h4> <%= "Phone number:" %></h4>
+    <p><%= "#{current_user.phone_number}" %></p>
   </div>
 
   <div class="dashboard-interests">
       <% current_user.user_interests.each do |interest| %>
           <% interest_card = Interest.find(interest.interest_id) %>
-            <%= interest_card.name %>
+            <div class="dashboard-interest">
+              <%= image_tag(interest_card.icon_path, class: "dashboard-interest_icon") %>
+              <%= interest_card.name %>
+              </div>
       <% end %>
   </div>
-
+  <div class="dashboard-edit">
+    <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size: 30px;"></i>
+  </div>
 </div>
 
-
-
-
-<!--
 <div class="dashboard-bio">
+  <h4>My bio:</h4>
   <%=  current_user.bio %>
-
 </div>
-
 
 <div class="dashboard-motivation">
+  <h4>My motivation:</h4>
   <%=  current_user.motivation %>
-</div> -->
+</div>
+
+<div class="dashboard-friendrequest">
+  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+  <div class="message-name">
+    <h3>Gab Dehan</h3>
+    <p>10/07/17</p>
+  </div>
+  <div class="message-body">
+    <p><strong>I am not sure yet!</strong></p>
+    <p>
+      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+    </p>
+  </div>
+  <div class="message-status">
+    <p class="status pending">Pending</p>
+    <p class="price">€345</p>
+  </div>
+</div>
