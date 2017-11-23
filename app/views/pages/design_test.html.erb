@@ -21,14 +21,14 @@
 <div class="body-content">
   <div class="slider-window">
     <div class="filter-window">
-        <h5>Maximal distance</h5>
-        <input type="range" min="1" max="50" value="25" class="range" id="myRange" step="5">
-        <h5 id="showValue"></h5>
+      <h5>Maximal distance</h5>
+      <input type="range" min="1" max="50" value="25" class="range" id="myRange" step="5">
+      <h5 id="showValue"></h5>
       <i class="fa fa-globe" aria-hidden="true"></i>
     </div>
   </div>
   <div class="card-body">
-  <% 10.times do %>
+    <% 10.times do %>
     <div class="row profile-cards">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card profile-card">
@@ -46,6 +46,9 @@
     <% end %>
   </div>
 </div>
+
+<!-- __________________ PROFILE TILE TEMPLATE____________________
+-->
 <div class="sample-card">
   <div class="profile-tile">
 
@@ -53,13 +56,9 @@
 
       <img class="profile-avatar" src=<%= image_path "harry.jpg"%>>
 
-
     </div>
 
-
     <h3><strong>HARRY POTTER</strong></h3>
-
-    <!-- USE SEED FILE!!!!!!!!!!!!! -->
 
     <p> My best friend is about 60 years old and he is one of the people I love most in this world. I am excited to make more friendships like the one I have with him. </p>
 
@@ -69,14 +68,14 @@
 
   </div>
 
-<script>
+  <script>
 
 // ------------- SHOW AND HIDE FILTER------------------------
-  const sliderHide = document.querySelector(".hide-slider");
-  const sliderShow = document.querySelector(".show-slider");
-  const filterWindow = document.querySelector(".slider-window");
-  const overlay = document.querySelector(".overlay");
-  const cards = document.querySelector(".card-body");
+const sliderHide = document.querySelector(".hide-slider");
+const sliderShow = document.querySelector(".show-slider");
+const filterWindow = document.querySelector(".slider-window");
+const overlay = document.querySelector(".overlay");
+const cards = document.querySelector(".card-body");
   // const rangeValue = document.querySelector("#myrange").value
   // const showValue = document.querySelector("#showValue")
 
@@ -116,9 +115,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.getElementById('location-form').addEventListener('submit', function(evt){
-    evt.preventDefault();
-    locationValue.innerText = addressSearch.value;
-    addressSearch.value = "";
+  evt.preventDefault();
+  locationValue.innerText = addressSearch.value;
+  addressSearch.value = "";
 })
 
 </script>
+
+<!-- __________________ BUTTON TEMPLATE__________________________ -->
+<div class="sample-button-border">
+  <%= link_to "CONTACT ME!", "#", class: "generic_button login_button" %>
+</div>
+
+<div class="sample-button-border">
+  <%= link_to "FREE SIGN UP!", "#", class: "generic_button login_button" %>
+</div>
+
+<div class="sample-button-border">
+  <%= link_to "MEMBER LOGIN", "#", class: "generic_button login_button" %>
+</div>
