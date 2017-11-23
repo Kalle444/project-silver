@@ -1,6 +1,5 @@
 //= require rails-ujs
-//= require jquery3
-//= require popper
+//= require jquery
 //= require bootstrap-sprockets
 
 // below is for attachinary to work
