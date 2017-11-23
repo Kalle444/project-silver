@@ -1,3 +1,5 @@
+<!-- Bar for search and filter -->
+
 <div class="filter-bar">
   <div class="show-slider">
     <%= image_tag("filter-slider.svg") %>
@@ -18,50 +20,61 @@
   </div>
 </div>
 
-<div class="body-content">
-  <div class="slider-window">
-    <div class="filter-window">
-        <h5>Maximal distance</h5>
-        <form name="radius" action="/profiles" method="get" id="radius-form">
-          <input  type="range" min="1" max="50" value="25" class="range" step="5" id="set-radius">
-          <input type="submit" value="Change radius">
-        </form>
-        <h5 id="showValue"></h5>
-      <i class="fa fa-globe" aria-hidden="true"></i>
-    </div>
-  </div>
-  <div class="card-body">
-    <% @profiles.each do |profile| %>
-    <ul>
-      <li><%= profile.first_name %><%= profile.location%></li>
-      </ul>
-    <% end %>
-  </div>
-</div>
+<!-- Content with the slider from left and the cards  -->
 
-<script>
+<!--   <div class="filter-window-wrapper">
+    <div class="filter-window"></div>
+  </div> -->
+  <!-- <div class="card-flex-box"> -->
+    <!-- <div class="container"> -->
+<div class="row">
+
+  <% @profiles.each do |profile| %>
+      <div class="profile-tile">
+        <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path "hogwarts.jpg"%>);" >
+        <img class="profile-avatar" src=<%= image_path "harry.jpg"%>>
+      </div>
+      <div class="profile-content">
+        <h3><strong><%= profile.first_name %> <%= profile.last_name %></strong></h3>
+        <p> My best friend is about 60 years old and he is one of the people I love most in this world. I am excited to make more friendships like the one I have with him. </p>
+        <div class="button">
+          <p><strong>More Info!</strong></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>
+<!-- </div> -->
+
+  <!-- </div> -->
+
+
+<!-- JAVASCRIPT -->
+
+  <script>
 
 // ------------- SHOW AND HIDE FILTER------------------------
-  const sliderHide = document.querySelector(".hide-slider");
-  const sliderShow = document.querySelector(".show-slider");
-  const filterWindow = document.querySelector(".slider-window");
-  const overlay = document.querySelector(".overlay");
-  const cards = document.querySelector(".card-body");
-  // const rangeValue = document.querySelector("#myrange").value
-  // const showValue = document.querySelector("#showValue")
+const sliderHide = document.querySelector(".hide-slider");
+const sliderShow = document.querySelector(".show-slider");
+const filterWindow = document.querySelector(".slider-window");
+const overlay = document.querySelector(".overlay");
+const cards = document.querySelector(".card-body");
+//   // const rangeValue = document.querySelector("#myrange").value
+//   // const showValue = document.querySelector("#showValue")
 
   function hideFilterWindow() {
     sliderShow.style.display = "flex";
     sliderHide.style.display= "none";
-    filterWindow.style.transform = "translateX(-300px)";
-    cards.style.transform = "translateX(-300px)";
+    // filterWindow.style.transform = "translateX(-300px)";
+    // cards.style.transform = "translateX(-300px)";
   };
 
   function showFilterWindow() {
     sliderHide.style.display= "flex";
     sliderShow.style.display = "none";
-    filterWindow.style.transform = "none";
-    cards.style.transform = "none";
+    // filterWindow.style.transform = "none";
+    // cards.style.transform = "none";
   };
 
   sliderHide.addEventListener("click", hideFilterWindow);
