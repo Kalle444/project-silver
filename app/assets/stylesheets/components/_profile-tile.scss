@@ -1,3 +1,12 @@
+.profile-tile {
+  margin: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.profile-content {
+  padding: 20px;
+}
+
 .profile-banner {
   position: relative;
   height: 175px;
@@ -7,18 +16,15 @@
 
 .profile-avatar {
   position: absolute;
-  // right: 5px;
-  // left: 5px;
-  // top: 5px;
   width: 150px;
   border-radius: 50%;
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .sample-card {
-
   height: 400px;
   border: 1px black solid;
   border-radius: 5px;
@@ -33,7 +39,6 @@
 }
 
 .button {
-  // font: bold 11px Arial;
   text-decoration: none;
   background-color: #EEEEEE;
   color: #333333;
