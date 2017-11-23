@@ -1,9 +1,9 @@
-
+<div class="dashboard">
 
 <div class="dashboard-profile-box">
 
   <div class="dashboard-profile_avatar">
-    <%= cl_image_tag current_user.profile_picture.path, class: "dashboard-profile-img" %>
+    <%= cl_image_tag current_user.profile_picture.path, class: "avatar-Xlarge dashboard-profile-img" %>
   </div>
 
   <div class="dashboard-profile_info">
@@ -15,16 +15,24 @@
   </div>
 
   <div class="dashboard-interests">
-      <% current_user.user_interests.each do |interest| %>
-          <% interest_card = Interest.find(interest.interest_id) %>
-            <div class="dashboard-interest">
-              <%= image_tag(interest_card.icon_path, class: "dashboard-interest_icon") %>
-              <%= interest_card.name %>
+    <!-- <h4 class="text-center">My Interests</h4><hr> -->
+    <div class="row">
+        <% current_user.user_interests.each do |interest| %>
+          <div class="col-xs-4">
+            <% interest_card = Interest.find(interest.interest_id) %>
+              <div class="dashboard-interest">
+                <%= image_tag(interest_card.icon_path, class: "dashboard-interest_icon") %>
+                <%= interest_card.name %>
               </div>
-      <% end %>
+            </div>
+        <% end %>
+    </div>
   </div>
+
   <div class="dashboard-edit">
-    <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size: 30px;"></i>
+    <%= link_to edit_profile_path(current_user) do %>
+      <i class="fa fa-pencil-square-o dashboard-edit-icon" aria-hidden="true"></i>
+    <% end %>
   </div>
 </div>
 
@@ -37,21 +45,27 @@
   <h4>My motivation:</h4>
   <%=  current_user.motivation %>
 </div>
+<h4>My friend requests</h4>
+  <% current_user.friend_requests_as_young_user.each do |fr| %>
+  <% old_user = User.find(fr.old_user_id) %>
+  <div class="dashboard-friendrequest">
+    <% if old_user.profile_picture? %>
+      <%= cl_image_tag old_user.profile_picture.path, class: "avatar-medium"  %>
+    <% else %>
+      <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <% end %>
+    <div class="dashboard-friendrequest-name">
+        <h3><%= "#{old_user.first_name} #{old_user.last_name}" %></h3>
+    </div>
+    <div class="dashboard-friendrequest-body">
+        <p>
+          <%= fr.request_message %>
+        </p>
+      </div>
+      <div class="dashboard-friendrequest-status">
+        <p class="status pending">Pending</p>
+      </div>
+  </div>
+  <% end %>
 
-<div class="dashboard-friendrequest">
-  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-  <div class="message-name">
-    <h3>Gab Dehan</h3>
-    <p>10/07/17</p>
-  </div>
-  <div class="message-body">
-    <p><strong>I am not sure yet!</strong></p>
-    <p>
-      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
-    </p>
-  </div>
-  <div class="message-status">
-    <p class="status pending">Pending</p>
-    <p class="price">€345</p>
-  </div>
 </div>
