@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.5'
 
 # BOOTSTRAP 4 GEMS
-gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
 
 #Cloudinary

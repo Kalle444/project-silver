@@ -7,7 +7,7 @@
 .row-main {
   display: flex;
   flex-direction: column;
-  background-color: $gray-100;
+  background-color: $gray;
   border-radius: 5px;
   margin: 20px;
   padding: 40px 0px;
@@ -31,10 +31,10 @@
 }
 
 .row-main h4 {
-  color: $gray-700;
+  color: $gray;
 }
 .row-main p {
-  color: $gray-500;
+  color: $gray;
 }
 
 .page-header.page-header-xs {
