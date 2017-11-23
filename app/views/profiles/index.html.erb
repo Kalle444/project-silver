@@ -1,3 +1,5 @@
+<!-- Bar for search and filter -->
+
 <div class="filter-bar">
   <div class="show-slider">
     <%= image_tag("filter-slider.svg", class: "slider-icon") %>
@@ -18,50 +20,52 @@
   </div>
 </div>
 
-<div class="body-content">
-  <div class="slider-window">
-    <div class="filter-window">
-        <h5>Maximal distance</h5>
-        <form name="radius" action="/profiles" method="get" id="radius-form">
-          <input  type="range" min="1" max="50" value="25" class="range" step="5" id="set-radius">
-          <input type="submit" value="Change radius">
-        </form>
-        <h5 id="showValue"></h5>
-      <i class="fa fa-globe" aria-hidden="true"></i>
-    </div>
+<!-- Content with the slider from left and the cards  -->
+
+<div class="index-flex-box">
+  <div class="filter-window-wrapper">
+    <div class="filter-window"></div>
   </div>
-  <div class="card-body">
-    <% @profiles.each do |profile| %>
-    <ul>
-      <li><%= profile.first_name %><%= profile.location%></li>
-      </ul>
-    <% end %>
+  <div class="card-flex-box">
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
+    <div class="my-sample-card"></div>
   </div>
 </div>
 
-<script>
+
+<!-- JAVASCRIPT -->
+
+  <script>
 
 // ------------- SHOW AND HIDE FILTER------------------------
-  const sliderHide = document.querySelector(".hide-slider");
-  const sliderShow = document.querySelector(".show-slider");
-  const filterWindow = document.querySelector(".slider-window");
-  const overlay = document.querySelector(".overlay");
-  const cards = document.querySelector(".card-body");
-  // const rangeValue = document.querySelector("#myrange").value
-  // const showValue = document.querySelector("#showValue")
+const sliderHide = document.querySelector(".hide-slider");
+const sliderShow = document.querySelector(".show-slider");
+const filterWindow = document.querySelector(".slider-window");
+const overlay = document.querySelector(".overlay");
+const cards = document.querySelector(".card-body");
+//   // const rangeValue = document.querySelector("#myrange").value
+//   // const showValue = document.querySelector("#showValue")
 
   function hideFilterWindow() {
     sliderShow.style.display = "flex";
     sliderHide.style.display= "none";
-    filterWindow.style.transform = "translateX(-300px)";
-    cards.style.transform = "translateX(-300px)";
+    // filterWindow.style.transform = "translateX(-300px)";
+    // cards.style.transform = "translateX(-300px)";
   };
 
   function showFilterWindow() {
     sliderHide.style.display= "flex";
     sliderShow.style.display = "none";
-    filterWindow.style.transform = "none";
-    cards.style.transform = "none";
+    // filterWindow.style.transform = "none";
+    // cards.style.transform = "none";
   };
 
   sliderHide.addEventListener("click", hideFilterWindow);
