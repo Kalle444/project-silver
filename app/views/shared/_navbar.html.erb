@@ -36,11 +36,6 @@
       <%= link_to "#{current_user.first_name} #{current_user.last_name}", "#" , class: "navbar-silver-item navbar-silver-link" %>
 
       <!-- Avatar with dropdown menu -->
-      <div class="navbar-silver-item">
-        <div class="dropdown">
-          <% avatar_url = current_user.profile_picture || "user_icon.png" %>
-          <%= cl_image_tag current_user.profile_picture.path,
-           class: "avatar dropdown-toggle", id: "navbar-silver-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-silver-dropdown-menu">
             <li>
               <%= link_to "#" do %>
