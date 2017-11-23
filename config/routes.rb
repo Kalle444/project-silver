@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :dashboards, only: [:show]
   resources :user_interests, only: [:index, :new, :create, :destroy]
 
   resources :profiles, only: [:show, :update, :edit, :index] do
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
 
   mount Attachinary::Engine => "/attachinary" #needed for attachinary to work
 
-  get 'index', to: 'friend_requests#index'
+  # get 'index', to: 'friend_requests#index'
 
   get 'pages/design_test', to: 'pages#design_test'
 

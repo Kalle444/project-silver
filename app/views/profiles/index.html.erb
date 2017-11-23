@@ -33,7 +33,7 @@
   <div class="card-body">
     <% @profiles.each do |profile| %>
     <ul>
-      <li><%= profile.first_name %><%= profile.location%></li>
+      <li><%= profile.first_name %><%= profile.location%><%= profile.id%></li>
       </ul>
     <% end %>
   </div>
