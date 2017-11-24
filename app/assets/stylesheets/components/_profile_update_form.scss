@@ -23,15 +23,30 @@
   }
 }
 
-
 .interest_icon {
-  width: 60px;
+  width: 30px;
 }
 
 .interest-card {
   border: 1px solid black;
   text-align: center;
-  width: 100px;
+  width: 60px;
   padding: 4px;
   margin: 15px;
 }
+
+.submit-button {
+    background-color: $teal;
+    border: none;
+}
+
+.form_profile_update {
+
+  ul {
+
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+}
+
