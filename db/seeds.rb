@@ -8,9 +8,9 @@ puts "Seeding the database"
 
 # ------------------------------------------Old and young users-----------------------------
 
-john = User.create(first_name: "John", last_name: "User", email: "john@gmail.com", password: "123456", phone_number: "+49 123 456 78",
+john = User.create(first_name: "John", last_name: "Smith", email: "john@gmail.com", password: "123456", phone_number: "+49 123 456 78",
   bio: "Spent 5 years working with business development and marketing in large multination companies in Copenhagen (Novo Nordisk & Coloplast). Prior to that I studied business administration and management in several countries around the world on a bachelor and master level (Sweden, Canada, South Korea, Netherlands, Australia, Singapore). I want to take the leap into the world of tech. I absolutely love programming and want to get a position as a developer when I finish the program. I have an interest and passion for how we can drive positive social change in the world through technology. I believe technology can help build more sustainable and inclusive societies – the tech world is moving fast and I want to be part of shaping its path. I am particularly interested in AI technology and IoT.",
-  motivation: "I always spnent a lot of time with my grandparents, but since we moved away, I am missing the company of people, which have a totally differnt view on things and story than I have. That is why i would really like to spend time with someone with so much life experience and stories as they have.",
+  motivation: "I always spent a lot of time with my grandparents, but since we moved away, I am missing the company of people, which have a totally differnt view on things and story than I have. That is why i would really like to spend time with someone with so much life experience and stories as they have.",
   location: "Pilekrogen 1, 2730 Herlev",
   profile_picture_url: "https://cdn.shopify.com/s/files/1/0691/5403/t/141/assets/avatar-dhg.png?3166923016212737268")
 
@@ -44,7 +44,7 @@ aung = User.create(first_name: "Aung San", last_name: "Suu Kyi", email: "aung_sa
 
 angela = User.create(first_name: "Angela", last_name: "Merkel", email: "angela@gmail.com", password: "123456",
   bio: "I was born in Hamburg, West Germany, on July 17, 1954. Trained as a physicist, I entered politics after the 1989 fall of the Berlin Wall. Rising to the position of chairwoman of the Christian Democratic Union party, I eventually became Germany's first female chancellor and one of the leading figures of the European Union, following the 2005 national elections.",
-  motivation: "",
+  motivation: "I am a grandmother of four and always really enjoyed their company. But since I have to run a whole fucking country, they decided to move away from my 'Mutti' instintcs. That is why I would love to spend some time with an innocent human being.",
   location: "Kristen Bernikows Gade 13-1, 1100 København K",
   young: false,
   profile_picture_url: "https://www.welt.de/img/debatte/kommentare/mobile162745324/2262507247-ci102l-w1024/kombo-angela-merkel-martin-schulz.jpg")
@@ -136,7 +136,7 @@ UserInterest.create(user: jeffrey, interest: chess)
 #----------------------------------------New friend requests-------------------------------
 
 FriendRequest.create(young_user: john, old_user: jesse, request_message: "Dear Jesse, I have seen on your profile, that you are a soccer fan. I am playing almost every weekend, maybe you could come and watch (in Nørrebro). Aftewards we could grab a drink, if you would like that. Best, John")
-FriendRequest.create(young_user: john, old_user: mariha, request_message: "Dear Mariha, I found your bio to be really interesting, because I am also aspiring to become a singer just like you. Do you maybe want to meet up one day for a walk? Best regards, John")
-FriendRequest.create(young_user: john, old_user: jeffrey, request_message: "Hi Jeffrey! I have seen, you are interested in board games and chess, just like I am. Do you want to play a round of chess next Tuesday? Looking forward to hear from you. Best, John")
+FriendRequest.create(young_user: john, old_user: bill, request_message: "Dear Bill, I found your bio to be really interesting, because I am also aspiring to become an actor just like you. Do you maybe want to meet up one day for a walk and talk a bit? Best regards, John")
+# FriendReqsuest.create(young_user: john, old_user: jeffrey, request_message: "Hi Jeffrey! I have seen, you are interested in board games and chess, just like I am. Do you want to play a round of chess next Tuesday? Looking forward to hear from you. Best, John")
 
 puts "Seeding done"

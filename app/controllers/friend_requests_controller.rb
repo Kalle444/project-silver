@@ -13,7 +13,7 @@ class FriendRequestsController < ApplicationController
     @friend_request = FriendRequest.new(friend_requests_params)
     @friend_request.young_user = current_user
     @friend_request.old_user = @profile
-    @friend_request.save ? (redirect_to profiles_path) : (render :new)
+    @friend_request.save ? (redirect_to dashboards_path) : (render :new)
   end
 
   private
