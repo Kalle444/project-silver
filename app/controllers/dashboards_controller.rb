@@ -1,7 +1,6 @@
 class DashboardsController < ApplicationController
 
-  def show
-    # raise
+  def index
   end
 
 end
