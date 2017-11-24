@@ -39,7 +39,7 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 150;
 }
 
 .show-slider:hover {
@@ -61,7 +61,7 @@
   display: none;
   justify-content: space-between;
   border-right: white solid 1px;
-  z-index: 2;
+  z-index: 150;
 }
 
 .hide-slider:hover {
@@ -115,18 +115,19 @@
 
 .filter-window-wrapper {
   min-width: 0;
-  // transition: 0.4s;
   z-index: 99;
 }
 
 .filter-window {
   width: 0;
-  height: 100vh;
+  // height: 100vh;
   background-color: white;
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
   z-index: 100;
-  // transition: 0.4s;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .filter-visible {
