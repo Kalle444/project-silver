@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
   def update
     update_user_interests(params[:user][:interest_ids])
     @profile.update(profile_params)
-    @profile.save ? (redirect_to profile_path(@profile)) : (render :edit)
+    @profile.save ? (redirect_to dashboards_path) : (render :edit)
   end
 
   private
