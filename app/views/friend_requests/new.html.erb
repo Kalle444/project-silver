@@ -1,4 +1,13 @@
-<%= simple_form_for [@profile, @friend_request], url: profile_friend_requests_path(@profile)  do |f| %>
-  <%= f.input :request_message %>
-  <%= f.submit "Make contact", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="friend_request-form">
+      <%= simple_form_for [@profile, @friend_request], url: profile_friend_requests_path(@profile)  do |f| %>
+        <%= f.input :request_message, placeholder: "Let your new friend know why you want to meet" %>
+        <%= f.submit "Make contact", class: "btn btn-primary btn-block submit-button" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,7 +1,6 @@
 class DashboardsController < ApplicationController
 
-  def show
-    @user = User.find(params[:id])
+  def index
   end
 
 end
