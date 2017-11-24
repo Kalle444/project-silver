@@ -3,7 +3,7 @@
 <div class="filter-bar">
   <div class="show-slider">
     <%= image_tag("filter-slider.svg", class: "slider-icon-black") %>
-    <h5>Show Filters</h5>
+    <h5>Show Interest Filters</h5>
   </div>
   <div class="hide-slider">
     <%= image_tag("filter-slider-white.svg", class: "slider-icon-white") %>
@@ -24,30 +24,52 @@
 
 <div class="index-flex-box">
 
+<!-- Filter window with interest cards -->
+
   <div class="filter-window-wrapper">
     <div class="filter-window">
       <% Interest.all.each do |interest| %>
-        <p><%= interest.name %></p>
+        <div class="filter-interest-card">
+          <h4><%= interest.name %></h4>
+          <div>
+            <%= image_tag(interest.icon_path, class: "filter-interest-icon") %>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
 
+<!-- body with profile cards -->
+
   <div class="row" id="profile-cards">
       <% @profiles.each do |profile| %>
-        <div class="col-xs-12 col-md-6 col-lg-4">
-          <div class="profile-tile">
-            <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path "hogwarts.jpg"%>);" >
-            <img class="profile-avatar" src=<%= image_path "harry.jpg"%>>
-          </div>
-          <div class="profile-content">
-            <h3><strong><%= profile.first_name %> <%= profile.last_name %></strong></h3>
-            <p id="profile-bio"> <%= profile.bio %> </p>
-            <div class="button">
-              <p><strong>More Info!</strong></p>
+        <% if !profile.young %>
+          <div class="col-xs-12 col-md-6 col-lg-4">
+              <div class="profile-tile">
+            <%= link_to profile_path(profile) do %>
+                <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "blurry-spring.jpg"%>);" \>
+                <%= cl_image_tag profile.profile_picture.path, class: "profile-avatar", :transformation=>[
+                    {:width=>150, :height=>150, :crop=>"fill"}] %>
+              </div>
+              <div class="profile-content">
+                <h3><strong><%= profile.first_name %> <%= profile.last_name %></strong></h3>
+                <p id="profile-bio"> <%= profile.bio %> </p>
+                <div class="button">
+                  <h5>
+                    <% profile.user_interests.each do |user_interest| %>
+                      <% if user_interest != profile.user_interests.last %>
+                        <%= user_interest.interest.name + " |" %>
+                      <% else %>
+                        <%= user_interest.interest.name %>
+                      <% end %>
+                    <% end %>
+                  </h5>
+                </div>
+              </div>
+          <% end %>
             </div>
-          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 
@@ -101,6 +123,8 @@ document.addEventListener("DOMContentLoaded", function() {
     google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
   }
 });
+
+// --------------------------------FILTER LOGIC --------------------------------
 
 </script>
 
