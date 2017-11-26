@@ -4,10 +4,18 @@ class ProfilesController < ApplicationController
   def index
     @location = params[:location]
     @radius = 20
+    @interests = Interest.all
+    @selected_interests = params[:selected_interests]
     @profiles = return_profiles_based_on_location(@location, @radius)
+    if @selected_interests.nil?
+      @profiles_by_interest = @profiles
+    else
+      @profiles_by_interest = return_profiles_based_on_interests(@profiles)
+    end
   end
 
   def show
+    @friend_request = FriendRequest.where(young_user: current_user, old_user: @profile).exists?
   end
 
   def edit
@@ -48,5 +56,26 @@ class ProfilesController < ApplicationController
         user_interest.save
       end
     end
+  end
+
+  # 1. Compare selected interests and interests of profiles
+  # 2. Check how many interests match, get the number
+  # 3. Order the profiles by the numbers of matched interests, highest number first
+  def return_profiles_based_on_interests(profiles)
+    profiles.sort_by do |profile|
+      getMatchingInterests(profile).size
+    end.reverse
+  end
+
+  def getMatchingInterests(profile)
+    selectedInterests = []
+    profileInterests = []
+    @selected_interests.each do |si|
+      selectedInterests << si.to_i
+    end
+    UserInterest.where(user: profile).each do |ui|
+      profileInterests << ui.interest.id
+    end
+    return profileInterests & selectedInterests
   end
 end

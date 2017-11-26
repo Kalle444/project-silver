@@ -28,7 +28,8 @@
 
   <div class="filter-window-wrapper">
     <div class="filter-window">
-      <% Interest.all.each do |interest| %>
+
+      <% @interests.each do |interest| %>
         <div class="filter-interest-card">
           <h4><%= interest.name %></h4>
           <div>
@@ -36,13 +37,14 @@
           </div>
         </div>
       <% end %>
+
     </div>
   </div>
 
 <!-- body with profile cards -->
 
   <div class="row" id="profile-cards">
-      <% @profiles.each do |profile| %>
+      <% @profiles_by_interest.each do |profile| %>
         <% if !profile.young %>
           <div class="col-xs-12 col-md-6 col-lg-4">
               <div class="profile-tile">
@@ -74,6 +76,17 @@
   </div>
 
 </div>
+
+<!-- Interest Filter playground -->
+<form name="selected_interests" action="/profiles" method="get">
+  <% @interests.each do |interest| %>
+    <label for="selected_interest_<%= interest.id %>">
+      <%= interest.name %>
+    </label>
+    <input name="selected_interests[]" type="checkbox"  value="<%= interest.id %>" id="user_interest_<%= interest.id %>">
+  <% end %>
+  <input type="submit" value ="Search by interests">
+</form>
 
 <!-- JAVASCRIPT -->
 

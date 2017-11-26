@@ -36,10 +36,16 @@
     <h4>My motivation:</h4>
     <%=  @profile.motivation %>
   </div>
-<div class="userprofile-button">
-  <div class="btn btn-primary">
-    <h4><%= link_to "Contact #{@profile.first_name}", new_profile_friend_request_path(@profile) %> </h4>
+
+  <div class="userprofile-button">
+    <% if  @friend_request %>
+      <h4>Friend request pending</h4>
+    <% else %>
+      <%= link_to(new_profile_friend_request_path(@profile), class: "btn btn-primary")  do %>
+      <h4>Contact <%= @profile.first_name %></h4>
+      <% end %>
+    <% end %>
   </div>
-</div>
 
 </div>
+

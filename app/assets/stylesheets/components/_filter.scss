@@ -120,7 +120,7 @@
 
 .filter-window {
   width: 0;
-  // height: 100vh;
+  max-height: 1120px;
   background-color: white;
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
   z-index: 100;
