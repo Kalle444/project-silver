@@ -3,7 +3,12 @@
 <div class="dashboard-profile-box">
 
   <div class="dashboard-profile_avatar">
-    <%= cl_image_tag current_user.profile_picture.path, class: "avatar-Xlarge dashboard-profile-img" %>
+    <% if current_user.profile_picture %>
+                <% avatar_url = current_user.profile_picture.path %>
+            <% else %>
+                <% avatar_url = "face_dsncrt.jpg"  %>
+            <% end %>
+    <%= cl_image_tag avatar_url, class: "avatar-Xlarge dashboard-profile-img" %>
   </div>
 
   <div class="dashboard-profile_info">

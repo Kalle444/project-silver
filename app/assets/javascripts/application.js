@@ -1,6 +1,6 @@
 //= require rails-ujs
-//= require jquery
 //= require bootstrap-sprockets
+//= require jquery
 
 // below is for attachinary to work
 //= require jquery-fileupload/basic
