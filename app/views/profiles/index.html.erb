@@ -82,6 +82,16 @@
         <%= f.button :submit %>
 <% end %>
 
+<!-- <form name="selected_interests" action="/profiles" method="get">
+  <% @interests.each do |interest| %>
+    <label for="selected_interest_<%= interest.id %>">
+      <%= interest.name %>
+    </label>
+    <input name="selected_interests[]" type="checkbox"  value="<%= interest.id %>" id="user_interest_<%= interest.id %>">
+  <% end %>
+  <input type="submit" value ="Search by interests">
+</form> -->
+
 
 
 <!-- JAVASCRIPT -->
