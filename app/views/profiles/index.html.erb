@@ -77,7 +77,7 @@
 
 </div>
 
-<%= simple_form_for :filter, remote: true  do |f| %>
+<%= simple_form_for :filter do |f| %>
         <%= f.input :interests, collection: @interests, as: :check_boxes %>
         <%= f.button :submit %>
 <% end %>

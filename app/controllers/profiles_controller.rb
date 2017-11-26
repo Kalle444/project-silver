@@ -6,11 +6,11 @@ class ProfilesController < ApplicationController
     @location = params[:location]
     @radius = 20
     @interests = Interest.all
-    @selected_interests = params[:filter_interests]
     @profiles = return_profiles_based_on_location(@location, @radius)
     if @selected_interests.nil?
       @profiles_by_interest = @profiles
     else
+      @selected_interests = params[:filter][:interests]
       @profiles_by_interest = return_profiles_based_on_interests(@profiles)
     end
   end
