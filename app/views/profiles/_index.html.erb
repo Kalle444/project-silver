@@ -1,0 +1,31 @@
+  <div class="row" id="profile-cards">
+      <% profiles.each do |profile| %>
+        <% if !profile.young %>
+          <div class="col-xs-12 col-md-6 col-lg-4">
+              <div class="profile-tile">
+            <%= link_to profile_path(profile) do %>
+                <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "blurry-spring.jpg"%>);" \>
+                <%= cl_image_tag profile.profile_picture.path, class: "profile-avatar", :transformation=>[
+                    {:width=>150, :height=>150, :crop=>"fill"}] %>
+              </div>
+              <div class="profile-content">
+                <h3><strong><%= profile.first_name %> <%= profile.last_name %></strong></h3>
+                <p id="profile-bio"> <%= profile.bio %> </p>
+                <div class="button-profile-card">
+                  <h5>
+                    <% profile.user_interests.each do |user_interest| %>
+                      <% if user_interest != profile.user_interests.last %>
+                        <%= user_interest.interest.name + " |" %>
+                      <% else %>
+                        <%= user_interest.interest.name %>
+                      <% end %>
+                    <% end %>
+                  </h5>
+                </div>
+              </div>
+          <% end %>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>

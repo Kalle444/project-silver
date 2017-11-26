@@ -1,1 +1,4 @@
-console.log("this works");
+   // index_body = document.getElementById('index-body');
+  document.getElementById('index-body').innerHTML = "";
+  document.getElementById('index-body').insertAdjacentHTML("beforeend", "<%= j render 'profiles/index', profiles: @profiles %>");
+

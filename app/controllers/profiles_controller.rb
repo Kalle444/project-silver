@@ -7,12 +7,17 @@ class ProfilesController < ApplicationController
     @radius = 20
     @interests = Interest.all
     @profiles = return_profiles_based_on_location(@location, @radius)
-    if @selected_interests.nil?
-      @profiles_by_interest = @profiles
-    else
+
+    if params.has_key? "filter"
       @selected_interests = params[:filter][:interests]
-      @profiles_by_interest = return_profiles_based_on_interests(@profiles)
+      @profiles = return_profiles_based_on_interests(@profiles)
     end
+
+    respond_to do |format|
+            format.html { @profiles }
+            format.js  # <-- will render `app/views/reviews/index.js.erb`
+    end
+
   end
 
   def show
