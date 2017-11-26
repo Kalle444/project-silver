@@ -4,10 +4,11 @@
 
   <div class="userprofile-profile_avatar">
     <% if @profile.profile_picture %>
-      <%= cl_image_tag @profile.profile_picture.path, class: "avatar-XXlarge userprofile-profile-img" %>
-    <% else %>
-      <%= image_tag "avatar.png", class: "avatar-XXlarge userprofile-profile-img"   %>
-    <% end %>
+                <% avatar_url = @profile.profile_picture.path %>
+            <% else %>
+                <% avatar_url = "face_dsncrt.jpg"  %>
+            <% end %>
+    <%= cl_image_tag avatar_url, class: "avatar-XXlarge userprofile-profile-img" %>
   </div>
 
   <div class="userprofile-interests">
