@@ -70,6 +70,18 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+
+.better-home-avatar {
+  // position: absolute;
+  width: 250px;
+  border-radius: 50%;
+  // bottom: -100px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  // text-align: center;
+}
+
 .home-sample-card {
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
   border-radius: 5px;
@@ -87,12 +99,11 @@
 
 .what-is-amikeco-sample-card {
   height: 200px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
-  border-radius: 5px;
   padding: 5px;
-  margin: 15px;
   // overflow: hidden;
   text-align: center;
+  color: white;
+  background-color: $primary;
 }
 
 .what-members-say-sample-card {
@@ -124,5 +135,79 @@
   width: 100%;
   text-align: center;
 }
+
+
+.testimonial-card {
+  position: relative;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+
+.testimonial-content {
+  position: absolute;
+  padding: 0 40px;
+  top: 10px;
+  left: 350px;
+}
+
+.testimonial-body-image {
+ position: relative;
+ padding: 0 40px;
+}
+
+// FRONT PAGE TOP content:
+
+
+.cake-testimonial-card {
+  position: relative;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+
+.cake-testimonial-content {
+  position: absolute;
+  padding: 0 40px;
+  top: 10px;
+  left: 750px;
+  h1 {
+    margin-bottom: 50px;
+  }
+}
+
+.cake-testimonial-body-image {
+ position: relative;
+ padding: 0 40px;
+}
+
+
+.cake-better-home-avatar {
+  // position: absolute;
+  width: 550px;
+  border-radius: 50%;
+  // bottom: -100px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  // text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
