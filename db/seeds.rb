@@ -87,7 +87,7 @@ gardening = Interest.create(name: "gardening".capitalize, icon_path: "interest_i
 singing = Interest.create(name: "singing".capitalize, icon_path: "interest_icons/singing.png" )
 golf = Interest.create(name: "golf".capitalize, icon_path: "interest_icons/golf.png" )
 dogs = Interest.create(name: "dogs".capitalize, icon_path: "interest_icons/dog.png" )
-
+hiking = Interest.create(name: "hiking".capitalize, icon_path: "interest_icons/hiking.png" )
 
 #-----------------------------------------Assigning Interests to Users----------------------------------------------
 
