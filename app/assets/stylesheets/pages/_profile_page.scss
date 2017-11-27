@@ -1,45 +1,45 @@
 .userprofile {
   padding-left: 100px;
-  padding-right: 100px
+  padding-right: 100px;
 }
 
 .userprofile-profile-box {
   display: flex;
-  height: 350px;
+  height: 315px;
 }
 
-.userprofile-profile-img {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 10px;
-  height: 350px;
-
+.userprofile-avatar {
+  padding-left: 30px;
+  margin: auto 0;
 }
-
 
 .userprofile-interests {
-  // display: flex;
-  // justify-content: space-around;
-  // flex-wrap: wrap;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-left: 40px;
   padding-right: 30px;
   height: 350px;
-  // flex-grow: 1;
   min-width: 890px;
 }
 
 .userprofile-interest {
   background: white;
-  border: 2px solid #99D5F9;
+  border: 2px solid $primary;
   opacity: 1;
   padding: 5px;
   border-radius: 5px;
-  // flex: 0 0 25%;
   text-align: center;
   margin: 5px 5px;
-  // width: 95px;
+  box-shadow: 0 0 3px $primary-hover;
+
 }
+
+.userprofile-information {
+  padding: 15px;
+  margin: 0 0 25px 0;
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
 
 
 .userprofile-interest_icon {
@@ -60,19 +60,34 @@
 
 .userprofile-button {
   text-align: center;
-  a {
-    color: white;
-  }
-  .btn {
-    background-color: $teal;
-    border: none;
-    width: 350px;
-    height: 50px;
-  }
-  :hover {
-    text-decoration: none;
+  margin: 20px 30%;
+}
+
+.orange-button-request {
+  margin:0;
+  // margin: 7px 0;
+  background-color: $secondary;
+  padding: 10px 0;
+  border-radius: 5px;
+  &:hover {
+    background-color: $secondary-hover;
   }
 }
+
+.orange-button-request h3 {
+  color: white;
+  margin: 0;
+}
+
+.orange-button-request a {
+  text-decoration: none !important;
+}
+
+.orange-text {
+  color: $secondary;
+}
+
+
 
 
 
