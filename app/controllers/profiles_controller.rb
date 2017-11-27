@@ -1,17 +1,23 @@
 class ProfilesController < ApplicationController
 
   before_action :set_profile, only: [:show, :edit, :update]
+
   def index
     @location = params[:location]
     @radius = 20
     @interests = Interest.all
-    @selected_interests = params[:selected_interests]
     @profiles = return_profiles_based_on_location(@location, @radius)
-    if @selected_interests.nil?
-      @profiles_by_interest = @profiles
-    else
-      @profiles_by_interest = return_profiles_based_on_interests(@profiles)
+
+    if params.has_key? "filter"
+      @selected_interests = params[:filter][:interests]
+      @profiles = return_profiles_based_on_interests(@profiles)
     end
+
+    respond_to do |format|
+            format.html { @profiles }
+            format.js  # <-- will render `app/views/reviews/index.js.erb`
+    end
+
   end
 
   def show

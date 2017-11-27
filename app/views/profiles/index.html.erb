@@ -22,7 +22,7 @@
 
 <!-- Content with the slider from left and the cards  -->
 
-<div class="index-flex-box">
+<div class="index-flex-box" id="profile-box">
 
 <!-- Filter window with interest cards -->
 
@@ -42,51 +42,17 @@
   </div>
 
 <!-- body with profile cards -->
-
-  <div class="row" id="profile-cards">
-      <% @profiles_by_interest.each do |profile| %>
-        <% if !profile.young %>
-          <div class="col-xs-12 col-md-6 col-lg-4">
-              <div class="profile-tile">
-            <%= link_to profile_path(profile) do %>
-                <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "blurry-spring.jpg"%>);" \>
-                <%= cl_image_tag profile.profile_picture.path, class: "profile-avatar", :transformation=>[
-                    {:width=>150, :height=>150, :crop=>"fill"}] %>
-              </div>
-              <div class="profile-content">
-                <h3><strong><%= profile.first_name %> <%= profile.last_name %></strong></h3>
-                <p id="profile-bio"> <%= profile.bio %> </p>
-                <div class="button-profile-card">
-                  <h5>
-                    <% profile.user_interests.each do |user_interest| %>
-                      <% if user_interest != profile.user_interests.last %>
-                        <%= user_interest.interest.name + " |" %>
-                      <% else %>
-                        <%= user_interest.interest.name %>
-                      <% end %>
-                    <% end %>
-                  </h5>
-                </div>
-              </div>
-          <% end %>
-            </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+<div id="index-body">
+  <%= render 'profiles/index', profiles: @profiles %>
+</div>
 
 </div>
 
-<!-- Interest Filter playground -->
-<form name="selected_interests" action="/profiles" method="get">
-  <% @interests.each do |interest| %>
-    <label for="selected_interest_<%= interest.id %>">
-      <%= interest.name %>
-    </label>
-    <input name="selected_interests[]" type="checkbox"  value="<%= interest.id %>" id="user_interest_<%= interest.id %>">
-  <% end %>
-  <input type="submit" value ="Search by interests">
-</form>
+<%= simple_form_for :filter, remote: true, method: "get" do |f| %>
+        <%= f.input :interests, collection: @interests, as: :check_boxes %>
+        <%= f.button :submit %>
+<% end %>
+
 
 <!-- JAVASCRIPT -->
 
