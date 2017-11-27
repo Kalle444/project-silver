@@ -1,7 +1,7 @@
 .footer {
   height: 80px;
   line-height: 60px;
-  background: white;
+  background: $background;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@
   margin-right: 400px;
   margin-top: 50px;
   color: rgba(0,0,0,0.3);
-  border-top: 2px solid #EEEEEE;
+  border-top: 2px solid white;
 
 }
 
