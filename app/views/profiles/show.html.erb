@@ -8,7 +8,8 @@
             <% else %>
                 <% avatar_url = "face_dsncrt.jpg"  %>
             <% end %>
-    <%= cl_image_tag avatar_url, class: "avatar-XXlarge userprofile-profile-img" %>
+    <%= cl_image_tag avatar_url, class: "avatar-XXlarge", :transformation=>[
+                    {:width=>350, :height=>350, :crop=>"fill"}] %>
   </div>
 
   <div class="userprofile-interests">

@@ -10,10 +10,54 @@
 }
 
 .login_button {
-
+  border: 1px solid $primary;
+  background-color: $primary;
+  padding: 15px;
+  color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  width: 40%;
+  text-decoration: none !important;
+  &:hover {
+    background-color: $primary-hover;
+    color: white;
+  }
 }
 
-.signup_button {
-
+.sign_up_button {
+  border: 1px solid $primary;
+  background-color: $primary;
+  padding: 15px;
+  color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  width: 40%;
+  text-decoration: none !important;
+  &:hover {
+    background-color: $primary-hover;
+    color: white;
+  }
 }
 
+.orange-button {
+  height: 40px;
+  border-radius: 5px;
+  background-color: $secondary;
+  color: white;
+  padding: 0 13px;
+  &:hover {
+    background-color: $secondary-hover;
+  }
+}
+
+.google-button {
+  background-color: #437AF8;
+  padding: 15px;
+  color: white;
+  height: 100%;
+  margin-right: 0;
+}
+
+#google_g {
+  height: 30px;
+  align-self: center;
+  margin: auto;
+}

@@ -40,8 +40,11 @@
 }
 
 .submit-button {
-    background-color: $teal;
+    background-color: $secondary;
     border: none;
+    &:hover {
+      background-color: $secondary-hover;
+    }
 }
 
 .form_profile_update {
