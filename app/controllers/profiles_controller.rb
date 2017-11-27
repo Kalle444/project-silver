@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
     @location = params[:location]
     @radius = 20
     @interests = Interest.all
-    @profiles = return_profiles_based_on_location(@location, @radius)
+    @profiles_interest = return_profiles_based_on_location(@location, @radius)
 
     if params.has_key? "filter"
       @selected_interests = params[:filter][:interest_ids]
