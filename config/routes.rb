@@ -13,8 +13,6 @@ Rails.application.routes.draw do
 
   get 'pages/design_test', to: 'pages#design_test'
 
-  post '/profiles', to: 'profiles#index'
-
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   root to: 'pages#home'
