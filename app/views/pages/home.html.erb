@@ -1,86 +1,136 @@
-<!--FIRST CARD WITH LOGO AND INTRO -->
-
-<div class="home-headline-banner">
-  <div class="home-banner-top" >
-
-    <img class="home-avatar-banner" src=<%= image_path "oldie.png"%>>
-
-  </div>
-  <div class="home-banner-bottom">
-   <h1><strong>Welcome to Amikeco!</strong></h1>
-   <h2>Make New Friends In Your Area</h2>
-   <h3>Connect with people in your community who share your interests!</h3>
-   <br>
-   <div class="buttons">
+<!--
      <%= link_to "FREE SIGN UP!", "#", class: "generic_button login_button" %>
-     <%= link_to "MEMBER LOGIN", "#", class: "generic_button login_button" %>
-   </div>
- </div>
-</div>
+     <%= link_to "MEMBER LOGIN", "#", class: "generic_button login_button" %> -->
 
-<!-- 4 BUBBLES OF MAIN ACTIONS -->
 
-<div class="four-bubbles-main-actions-sample-card">
-  <div class="container">
+        <div class="cake-testimonial-card">
+          <div class="cake-testimonial-body-image">
+
+            <img class="cake-better-home-avatar" src=<%= image_path "friends.jpg"%>>
+
+          </div>
+          <div class="cake-testimonial-content">
+            <h1>Make a friend for life!</h1>
+            <%= link_to "FREE SIGN UP!", "#", class: "generic_button login_button" %>
+          </div>
+
+        </div>
+     <!--  <div class="col-md-6">
+        <div class="testimonial-card">
+          <div class="testimonial-body-image">
+            <img class="better-home-avatar" src=<%= image_path "sebb.jpg"%>>
+
+          </div>
+          <div class="testimonial-content">
+          </div>
+        </div>
+      </div> -->
+
+  <!-- WHAT IS AMIKECO -->
+
+  <div class="what-is-amikeco-sample-card">
+    <h1><strong>What is Amikeco?</strong></h1>
+    <h3>
+      Harry and Hagrid, Marty and Doc, Daniel and Mr. Miyagi... What do all these people have in common? They all understand that age is just a number and quality friendships are based on more than just the age on your birth certificate. Amikeco is a website that connects people from the community with shared interests whose paths might never have crossed.
+    </h3>
+  </div>
+
+
+  <!-- WHAT IS AMIKECO -->
+
+  <div class="what-is-amikeco-sample-card">
+    <h1><strong>The science is in!</strong></h1>
+    <p>
+      Harry and Hagrid, Marty and Doc, Daniel and Mr. Miyagi... What do all these people have in common? They all understand that age is just a number and quality friendships are based on more than just the age on your birth certificate. Amikeco is a website that connects people from the community with shared interests whose paths might never have crossed.
+    </p>
+  </div>
+
+
+  <!-- WHAT MEMBERS ARE SAYING -->
+
+  <div class="container-fluid">
+
+    <!-- ROW 1 -->
+
     <div class="row">
 
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <div class="testimonial-body-image">
 
-      <div class="col-xs-12 col-sm-4">
-        <div class="home-sample-card">
-          <div class="home-tile-banner" >
-            <img class="home-avatar" src=<%= image_path "meet.jpg"%>>
+            <img class="better-home-avatar" src=<%= image_path "harry.jpg"%>>
+
           </div>
-          <h1><strong>MEET</strong></h1>
-          <h3>New friends with common interests and hang out with them.</h3>
+          <div class="testimonial-content">
+            <h1>"I love Amikeco! Choosing to sign up was one of the best decisions of my life"</h1>
+            <h2>- Harry, Nørrebro</h2>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <div class="testimonial-body-image">
+            <img class="better-home-avatar" src=<%= image_path "sebb.jpg"%>>
+
+          </div>
+          <div class="testimonial-content">
+            <h1>"I love Amikeco! Choosing to sign up was one of the best decisions of my life"</h1>
+            <h2>- Harry, Nørrebro</h2>
+          </div>
+        </div>
+      </div>
+
+    <!-- ROW 2 -->
+
+
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <div class="testimonial-body-image">
+            <img class="better-home-avatar" src=<%= image_path "sondre.png"%>>
+          </div>
+          <div class="testimonial-content">
+            <h1>"I love Amikeco! Choosing to sign up was one of the best decisions of my life"</h1>
+            <h2>- Harry, Nørrebro</h2>
+          </div>
         </div>
       </div>
 
 
-
-      <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-          <div class="home-sample-card">
-            <div class="home-tile-banner" >
-              <img class="home-avatar" src=<%= image_path "discover.jpg"%>>
-            </div>
-            <h1><strong>DISCOVER</strong></h1>
-            <h3>People in your community who like the same things as you.</h3>
+      <div class="col-md-6">
+        <div class="testimonial-card">
+          <div class="testimonial-body-image">
+            <img class="better-home-avatar" src=<%= image_path "avatar.png"%>>
           </div>
-        </div>
-
-
-
-        <div class="col-xs-12 col-sm-4">
-          <!-- insert <div class="card"> -->
-            <div class="home-sample-card">
-              <div class="home-tile-banner" >
-                <img class="home-avatar" src=<%= image_path "share.jpg"%>>
-              </div>
-              <h1><strong>SHARE</strong></h1>
-              <h3>Share as much or as little about yourself as you are comfortable.</h3>
-            </div>
+          <div class="testimonial-content">
+            <h1>"I love Amikeco! Choosing to sign up was one of the best decisions of my life"</h1>
+            <h2>- Harry, Nørrebro</h2>
           </div>
-
-
-
         </div>
       </div>
+
+<!-- CLOSE ROW -->
     </div>
+<!-- CLOSE CONTAINER -->
   </div>
 
-      <!-- WHAT IS AMIKECO -->
 
-      <div class="what-is-amikeco-sample-card">
-        <h1><strong>WHAT IS AMIKECO?</strong></h1>
-        <h3>
-          Harry and Hagrid, Marty and Doc, Daniel and Mr. Miyagi... What do all these people have in common? They all understand that age is just a number and quality friendships are based on more than just the age on your birth certificate. Amikeco is a website that connects people from the community with shared interests whose paths might never have crossed.
-        </h3>
-      </div>
 
-      <!-- WHAT MEMBERS ARE SAYING -->
 
-      <div class="what-members-say-sample-card">
-        <h1><strong>WHAT OUR MEMBERS ARE SAYING</strong></h1>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <div class="what-members-say-sample-card">
+        <h1><strong>What our members think of us</strong></h1>
         <h3>"I love it!"</h3>
         <h3>"I have finally met people who understand me on a deeper level."</h3>
         <h3>
@@ -88,4 +138,4 @@
         </h3>
       </div>
 
-
+    -->
