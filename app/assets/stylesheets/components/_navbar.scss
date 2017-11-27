@@ -1,7 +1,7 @@
 /* Main navbar */
 .navbar-silver {
   box-shadow: 0 0 16px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: $teal;
+  background: $primary;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -45,20 +45,17 @@
   padding: 5px 15px;
   margin-right: 5px;
   border-radius: 8px;
-  border: 1px solid $teal;
     &:hover {
       text-decoration: none;
-      border: 1px solid #00BFA5;
-      background-color: #00BFA5;
-      color: white;
+      background-color: $primary-hover;
+      color: $font-light;
     }
 }
 
 .navbar-link-active {
   text-decoration: none;
-  border: 1px solid #00BFA5;
-  background-color: #00BFA5;
-  color: white;
+  background-color: $primary-hover;
+  color: $font-light;
 }
 
 .navbar-silver-name {
@@ -76,14 +73,14 @@
 .navbar-silver-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #999999 !important;
+  color: $primary !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
 }
 .navbar-silver-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: $orange !important;
+  color: $primary-hover !important;
 }
 .navbar-silver-dropdown-menu:before {
   content: ' ';
