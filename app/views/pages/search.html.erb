@@ -1,21 +1,26 @@
 <div class="search_container">
+    <div class="search-box">
+      <h3 id="interest-headline"> Choose your location</h3>
+      <i class="fa fa-globe world-icon" aria-hidden="true"></i>
+    </div>
     <%= simple_form_for :search, url: profiles_path, method: "get" do |f| %>
           <div class="form-group">
-            <input class="form-control string required" type="text" name="location" id="location-search-box" placeholder="find a friend anywhere...">
+            <input class="form-control string required" type="text" name="location" id="location-search-box" placeholder="Try 'Copenhagen'">
           </div>
-          <h3 id="interest-headline"> I am interested in...</h3>
+          <h3 id="interest-headline"> Choose your interests</h3>
           <div class="form-group">
             <input type="hidden" name="filter[interest_ids][]" value="">
-            <div class="interest-choices">
+            <div class="search-interest-choices">
               <% Interest.all.each do |interest| %>
                 <input type="checkbox" class="hidden"  value="<%= interest.id %>" name="filter[interest_ids][]"
                 id="filter_interest_ids_<%= interest.id %>">
-                <label class="interest-choice" for="filter_interest_ids_<%= interest.id %>">
-                  <%= interest.name %> <hr style="margin-bottom: 0; margin-top:0">
-                  <%= image_tag(interest.icon_path, class: "interest_icon") %>
-
+                <label class="search-interest-choice" for="filter_interest_ids_<%= interest.id %>">
+                  <div class="search-interest-icon-circle">
+                  <%= image_tag(interest.icon_path, class: "search-interest-icon") %>
+                  </div>
+                  <span class="search-interest-name">
+                  <%= interest.name %>
                 </label>
-
               <% end %>
             </div>
           </div>
@@ -25,7 +30,7 @@
 
 <% content_for(:after_js) do %>
   <script type="text/javascript">
-      $(".interest-choice").click(function(){
+      $(".search-interest-choice").click(function(){
         $(this).toggleClass("active");
       });
 
@@ -40,6 +45,11 @@
         if (location) {
           var autocomplete = new google.maps.places.Autocomplete(location, { types: ['geocode'] });
           google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+          google.maps.event.addDomListener(location, 'keydown', function(e) {
+            if (e.key === "Enter") {
+              e.preventDefault(); // Do not submit the form on Enter.
+            }
+          });
         }
       });
   </script>
