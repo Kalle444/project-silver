@@ -43,13 +43,14 @@
 
 <!-- body with profile cards -->
 <div id="index-body">
-  <%= render 'profiles/index', profiles: @profiles %>
+  <%= render 'profiles/index', profiles_interest: @profiles_interest %>
 </div>
 
 </div>
 
-<%= simple_form_for :filter, remote: true, method: "get" do |f| %>
-        <%= f.input :interests, collection: @interests, as: :check_boxes %>
+<%= simple_form_for :filter, remote: true , method: "post" do |f| %>
+        <input id="location_search" name="location" type="hidden" value="<%= @location %>">
+        <%= f.input :interest_ids, collection: @interests, as: :check_boxes %>
         <%= f.button :submit %>
 <% end %>
 

@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   # get 'index', to: 'friend_requests#index'
 
+  post 'profiles', to: 'profiles#index'
   get 'pages/design_test', to: 'pages#design_test'
+  get 'pages/search', to: 'pages#search', as: "search"
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
