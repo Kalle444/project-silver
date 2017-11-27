@@ -7,5 +7,9 @@ class PagesController < ApplicationController
   def design_test
   end
 
+  def search
+    @interests = Interest.all
+  end
+
 end
 
