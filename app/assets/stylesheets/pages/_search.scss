@@ -1,5 +1,6 @@
 .search_container {
   padding-top: 35px;
+
   width: 900px;
   margin-left: 270px;
   margin-right: 270px;
@@ -89,9 +90,8 @@ color: $primary;
   height: 30px;
 }
 
-.search-submit-button {
-    background-color: $teal;
-    border: none;
+.search-button {
+    width: 100%;
 }
 
 
