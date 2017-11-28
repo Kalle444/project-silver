@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby '2.3.5'
 
 # BOOTSTRAP 4 GEMS
-gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 
 #Cloudinary
 gem 'cloudinary'
