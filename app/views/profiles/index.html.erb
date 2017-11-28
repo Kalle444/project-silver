@@ -27,85 +27,101 @@
 <!-- Filter window with interest cards -->
 
   <div class="filter-window-wrapper">
-    <div class="filter-window">
+    <%= simple_form_for :filter, method: "post", html: { id: :apply_interest_filter } do |f| %>
+      <input id="location_search" name="location" type="hidden" value="<%= @location %>">
+      <input type="hidden" name="filter[interest_ids][]" value="">
+      <div class="filter-window">
+      <div class="flex-grow">
+        <h4>Select your interests</h4>
+      </div>
+        <% @interests.each do |interest| %>
+            <input class="check_boxes required hidden" type="checkbox" value="<%= interest.id %>" name="filter[interest_ids][]" id="filter_interest_ids_<%= interest.id %>">
+          <label class="filter-interest-choice" for="filter_interest_ids_<%= interest.id %>">
+            <div class="search-interest-icon-circle">
+              <%= image_tag(interest.icon_path, class: "search-interest-icon") %>
+            </div>
+            <div class="filter-interest-name">
+              <%= interest.name %>
+            </div>
+          </label>
+        <% end %>
+      </div>
+      <%= f.button :submit, class: "hidden" %>
+    <% end %>
 
-      <% @interests.each do |interest| %>
-        <div class="filter-interest-card">
-          <h4><%= interest.name %></h4>
-          <div>
-            <%= image_tag(interest.icon_path, class: "filter-interest-icon") %>
-          </div>
-        </div>
-      <% end %>
-
-    </div>
   </div>
 
 <!-- body with profile cards -->
-<div id="index-body">
-  <%= render 'profiles/index', profiles_interest: @profiles_interest %>
-</div>
 
-</div>
+  <div id="index-body">
+    <%= render 'profiles/index', profiles_interest: @profiles_interest %>
+  </div>
 
-<%= simple_form_for :filter, remote: true , method: "post" do |f| %>
-        <input id="location_search" name="location" type="hidden" value="<%= @location %>">
-        <%= f.input :interest_ids, collection: @interests, as: :check_boxes %>
-        <%= f.button :submit %>
-<% end %>
+</div> <!-- Where is this coming from?? -->
 
 
 <!-- JAVASCRIPT -->
 
+<% content_for(:after_js) do %>
   <script>
 
-// ------------- SHOW AND HIDE FILTER------------------------
-const sliderHide = document.querySelector(".hide-slider");
-const sliderShow = document.querySelector(".show-slider");
-const filterWindowWrapper = document.querySelector(".filter-window-wrapper");
-const filterWindow = document.querySelector(".filter-window");
+  // ------------- SHOW AND HIDE FILTER------------------------
+  const sliderHide = document.querySelector(".hide-slider");
+  const sliderShow = document.querySelector(".show-slider");
+  const filterWindowWrapper = document.querySelector(".filter-window-wrapper");
+  const filterWindow = document.querySelector(".filter-window");
 
 
-  function hideFilterWindow() {
-    sliderShow.style.display = "flex";
-    sliderHide.style.display= "none";
-    filterWindowWrapper.classList.remove("filter-visible");
-    filterWindow.classList.remove("filter-visible");
-    // setTimeout(function(){ filterWindow.style.display = "none"; }, 150);
-  };
+    function hideFilterWindow() {
+      sliderShow.style.display = "flex";
+      sliderHide.style.display= "none";
+      filterWindowWrapper.classList.remove("filter-visible");
+      filterWindow.classList.remove("filter-visible");
+      // setTimeout(function(){ filterWindow.style.display = "none"; }, 150);
+    };
 
-  function showFilterWindow() {
-    sliderHide.style.display= "flex";
-    sliderShow.style.display = "none";
-    filterWindowWrapper.classList.add("filter-visible");
-    filterWindow.classList.add("filter-visible");
-    // setTimeout(function(){ filterWindow.style.display = "block"; }, 200);
+    function showFilterWindow() {
+      sliderHide.style.display= "flex";
+      sliderShow.style.display = "none";
+      filterWindowWrapper.classList.add("filter-visible");
+      filterWindow.classList.add("filter-visible");
+      // setTimeout(function(){ filterWindow.style.display = "block"; }, 200);
 
-  };
+    };
 
-  sliderHide.addEventListener("click", hideFilterWindow);
-  sliderShow.addEventListener("click", showFilterWindow);
+    sliderHide.addEventListener("click", hideFilterWindow);
+    sliderShow.addEventListener("click", showFilterWindow);
 
-// ---------------------------GOOGLE MAPS AUTOCOMPLETE-------------------------
+  // ---------------------------GOOGLE MAPS AUTOCOMPLETE-------------------------
 
 
-const addressSearch = document.querySelector("#location-search");
-const locationValue = document.querySelector("#location-value");
+  const addressSearch = document.querySelector("#location-search");
+  const locationValue = document.querySelector("#location-value");
 
-function onPlaceChanged() {
-  var place = this.getPlace();
-  var listAddress = document.getElementById('location-search');
-}
-document.addEventListener("DOMContentLoaded", function() {
-  var listAddress = document.getElementById('location-search');
-  if (listAddress) {
-    var autocomplete = new google.maps.places.Autocomplete(listAddress, { types: ['geocode'] });
-    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+  function onPlaceChanged() {
+    var place = this.getPlace();
+    var listAddress = document.getElementById('location-search');
   }
-});
+  document.addEventListener("DOMContentLoaded", function() {
+    var listAddress = document.getElementById('location-search');
+    if (listAddress) {
+      var autocomplete = new google.maps.places.Autocomplete(listAddress, { types: ['geocode'] });
+      google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+    }
+  });
 
-// --------------------------------FILTER LOGIC --------------------------------
+  // --------------------------------FILTER LOGIC --------------------------------
 
-</script>
+  $(".filter-interest-choice").click(function(){
+    $(this).toggleClass("active");
+  });
+
+
+  $(".filter-interest-choice").click(function() {
+    $("#apply_interest_filter").submit();
+  })
+
+  </script>
+<% end %>
 
 

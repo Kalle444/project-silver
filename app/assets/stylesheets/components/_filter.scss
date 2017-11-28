@@ -23,10 +23,6 @@
   align-items: center;
 }
 
-#location-form {
-
-}
-
 #location-search  {
   margin: 0 15px;
   width: 50%;
@@ -70,6 +66,8 @@
   justify-content: space-between;
   border-right: white solid 1px;
   z-index: 5;
+  border-top: 1px solid white;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.5);
 }
 
 .hide-slider:hover {
@@ -129,20 +127,67 @@
 
 .filter-window {
   width: 0;
-  max-height: 1120px;
-  background-color: white;
+  // max-height: 1120px;
+  background-color: rgba(255,255,255,0.8);
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
   z-index: 4;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  max-height: 830px;
 }
 
 .filter-visible {
   min-width: 300px;
 }
 
+.filter-interest-choice {
+  background: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  padding: 10px;
+  border-radius: 5px;
+  flex: 0 0 18%;
+  margin: 5px 5px;
+  text-align: center;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 85px;
+  min-height: 120px;
+  &:last-child {
+    margin-bottom: 20px;
+  }
 
+  &:first-child {
+    margin-top: 20px;
+  }
 
+  &:hover {
+    background: $secondary;
+    opacity: 1;
+    cursor: pointer;
+    color: white;
+    .search-interest-name {
+      color: white;
+    }
+  }
+  &.active {
+    background: $secondary-hover;
+    opacity: 1;
+      .filter-interest-name {
+      color: white;
+    }
+  }
+}
+
+.flex-grow {
+  flex: 1 0 100%;
+  padding: 5px 0 0 12px;
+}
+
+#apply_interest_filter.simple_form.filter::after {
+  display: none;
+}
 
