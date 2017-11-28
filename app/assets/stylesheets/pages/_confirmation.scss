@@ -1,0 +1,60 @@
+.confirmation-page-container {
+  padding: 30px 60px;
+  width: 900px;
+  margin-left: 270px;
+  margin-right: 270px;
+}
+
+.congratulation-message {
+    h1 {
+      font-size: 40px;
+    }
+
+
+}
+
+.action-buttons {
+  display:flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirmation-checkbox {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-mark {
+  font-size: 30px;
+  color: #558B2F;
+}
+
+.message-box {
+  display:flex;
+  align-items: center;
+  margin: 40px 0;
+}
+
+
+.friend-request-box {
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+.confirmation-message {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.confirmation-buttons {
+  padding: 8px 10px;
+
+
+}

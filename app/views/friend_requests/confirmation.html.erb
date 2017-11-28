@@ -1,0 +1,65 @@
+<div class="confirmation-page-container">
+
+  <div class="congratulation-message text-center">
+    <h1><%= "Congratulations #{current_user.first_name}!" %></h1>
+    <h1>You are one step closer to making a friend for life!</h1>
+  </div>
+
+  <div class="message-wrapper">
+    <div class="message-box">
+
+        <div class="confirmation-checkbox">
+          <i class="fa fa-check check-mark" aria-hidden="true"></i>
+        </div>
+
+        <div class="confirmation-message">
+        <p> <%= "Great job! You have now successfully contacted #{@friend_request.old_user.first_name}." %>
+        </p>
+
+        </div>
+    </div>
+
+    <div class="message-box">
+        <div class="confirmation-checkbox"></div>
+        <div class="confirmation-message">
+        <p> <%= "#{@friend_request.old_user.first_name} will review your request and let you know when a decision as been made :D"  %>
+        </p>
+         </div>
+    </div>
+
+    <div class="message-box">
+        <div class="confirmation-checkbox"></div>
+        <div class="confirmation-message">
+          <p> <%= "If #{@friend_request.old_user.first_name} also think you are a good fit - meet up and have fun. If it wasn't a perfect match, try again! "  %>  </p>
+          <p></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="friend-request-box">
+    <div class="dashboard-friendrequest">
+    <% if @friend_request.old_user.profile_picture? %>
+      <%= cl_image_tag @friend_request.old_user.profile_picture.path, class: "avatar-medium"  %>
+    <% else %>
+      <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <% end %>
+    <div class="dashboard-friendrequest-name">
+        <h3><%= "#{@friend_request.old_user.first_name} #{@friend_request.old_user.last_name}" %></h3>
+    </div>
+    <div class="dashboard-friendrequest-body">
+        <p>
+          <%= @friend_request.request_message %>
+        </p>
+      </div>
+      <div class="dashboard-friendrequest-status">
+        <p class="status pending">Pending</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <%= link_to "Go to my profile", dashboards_path, class: "btn orange-button confirmation-buttons" %>
+    <%= link_to "Continue searching for friends", profiles_path, class: "btn orange-button confirmation-buttons" %>
+  </div>
+
+</div>

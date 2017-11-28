@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :user_interests, only: [:index, :new, :create, :destroy]
 
   resources :profiles, only: [:show, :update, :edit, :index] do
-    resources :friend_requests, only: [:new, :create]
+      resources :friend_requests, only: [:new, :create] do
+        member do
+          get 'confirmation', to: "friend_requests#confirmation", as: "confirmation"
+        end
+      end
   end
 
   mount Attachinary::Engine => "/attachinary" #needed for attachinary to work
