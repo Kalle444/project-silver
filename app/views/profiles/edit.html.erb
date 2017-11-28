@@ -20,8 +20,12 @@
               <input type="checkbox" class="hidden"  value="<%= interest.id %>" name="user[interest_ids][]"
               id="user_interest_ids_<%= interest.id %>">
               <label class="interest-choice" for="user_interest_ids_<%= interest.id %>">
-                <%= interest.name %> <hr style="margin-bottom: 0; margin-top:0">
-                <%= image_tag(interest.icon_path, class: "interest_icon") %>
+                <div class="form-interest-icon-circle">
+                <%= image_tag(interest.icon_path, class: "form-interest-icon") %>
+                </div>
+                <span class="form-interest-name">
+                <%= interest.name %>
+                </span>
               </label>
             <% end %>
           </div>
