@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
 
     if params.has_key? "filter"
       @selected_interests = params[:filter][:interest_ids]
-      @profiles_interest = return_profiles_based_on_interests(@profiles)
+      @profiles_interest = return_profiles_based_on_interests(@profiles_interest)
     end
 
     respond_to do |format|
