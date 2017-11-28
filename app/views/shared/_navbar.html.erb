@@ -14,7 +14,9 @@
 
       <%= link_to "Help", "", class: "navbar-silver-item navbar-silver-link" %>
 
-      <%= link_to "#{current_user.first_name} #{current_user.last_name}", dashboards_path, class: "navbar-silver-item navbar-silver-link #{active_class(dashboards_path)}" %>
+      <%= link_to "My profile", dashboards_path, class: "navbar-silver-item navbar-silver-link #{active_class(dashboards_path)}" %>
+
+      <%= link_to "log out", destroy_user_session_path, method: :delete, class: "navbar-silver-item navbar-silver-link" %>
 
         <div class="navbar-silver-item">
 
