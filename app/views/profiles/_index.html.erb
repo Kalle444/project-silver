@@ -4,7 +4,9 @@
           <div class="col-xs-12 col-md-6 col-lg-4">
               <div class="profile-tile">
             <%= link_to profile_path(profile) do %>
-                <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "blurry-spring.jpg"%>);" \>
+              <div class="position-relative">
+              <div class="blurry">
+                <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path ("interest_wallpaper/" + profile.user_interests.sample.interest.name.downcase + ".jpg").gsub(" ", "_")%>);"></div></div>
                 <%= cl_image_tag profile.profile_picture.path, class: "profile-avatar", :transformation=>[
                     {:width=>150, :height=>150, :crop=>"fill"}] %>
               </div>
@@ -15,7 +17,7 @@
                   <h5>
                     <% profile.user_interests.each do |user_interest| %>
                       <% if user_interest != profile.user_interests.last %>
-                        <%= user_interest.interest.name + " |" %>
+                        <%= user_interest.interest.name + " | " %>
                       <% else %>
                         <%= user_interest.interest.name %>
                       <% end %>

@@ -5,48 +5,43 @@
 
 .dashboard-profile-box {
   display: flex;
-  height: 260px;
+  // height: 260px;
+
 }
 
 .dashboard-profile-img {
-  padding: 20px 20px;
-
+  margin: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
 }
 
 .dashboard-profile_info {
-  padding: 0 20px;
-  min-width: 385px;
-  border-right: 2px solid #B0BEC5;
-  margin-top: 10px;
-
+  padding: 0 20px 0 10px;
+  min-width: 250px;
+  border-right: 3px solid white;
+  margin: 10px 0 10px 0;
 }
 
 .dashboard-interests {
-  // display: flex;
+  flex-grow: 1;
+  padding: 15px 0 15px 15px;
+  min-height: 260px;
+  display: flex;
   // justify-content: space-around;
-  // flex-wrap: wrap;
-  padding-top: 10px;
-  padding-left: 40px;
-  padding-right: 30px;
-  height: 260px;
-  // flex-grow: 1;
-  min-width: 630px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .dashboard-interest {
   background: white;
-  border: 2px solid #99D5F9;
   opacity: 1;
-
-
-  // background: #b7b7b7;
   padding: 5px;
   border-radius: 5px;
-  // opacity: .4;
-  // flex: 0 0 25%;
   text-align: center;
   margin: 5px 5px;
-  // width: 95px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  width: 130px;
+  height: 40px;
 }
 
 
@@ -76,8 +71,8 @@
 }
 
 .dashboard-motivation {
-  padding-bottom: 40px;
-  border-bottom: 2px solid #B0BEC5;
+  padding-bottom: 20px;
+  // border-bottom: 2px solid #B0BEC5;
 
 }
 
@@ -135,6 +130,12 @@
 }
 .status.pending {
   color: lightgrey;
+}
+
+.flex-box-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
