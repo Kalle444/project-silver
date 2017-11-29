@@ -1,3 +1,14 @@
+.action-button {
+    background-color: $secondary;
+    border: none;
+    height: 40px;
+    color: white;
+    &:hover {
+      background-color: $secondary-hover;
+      color: white;
+    }
+}
+
 .generic_button {
   color: white;
   padding: 20px 25px;

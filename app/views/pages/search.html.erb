@@ -1,4 +1,6 @@
-<div class="search-page-container">
+
+<div class="search-main-container">
+  <div class="search-page-box">
     <div class="search-box">
       <h3 id="interest-headline"> Choose your location</h3>
       <i class="fa fa-globe world-icon" aria-hidden="true"></i>
@@ -25,8 +27,9 @@
               <% end %>
             </div>
           </div>
-          <%= f.button :submit, class: "btn orange-button search-button", value: "Find a friend" %>
+          <input type="submit" name="commit" value="Find a friend" class="btn btn-block action-button" data-disable-with="Find a friend">
     <% end %>
+  </div>
 </div>
 
 <% content_for(:after_js) do %>
