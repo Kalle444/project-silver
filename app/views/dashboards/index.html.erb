@@ -45,15 +45,19 @@
     <% current_user.friend_requests_as_young_user.each do |fr| %>
     <% old_user = User.find(fr.old_user_id) %>
     <div class="dashboard-friendrequest">
-      <% if old_user.profile_picture? %>
-        <%= cl_image_tag old_user.profile_picture.path, class: "avatar-medium", transformation: [
-                    {width: 50, height: 50, crop: "fill"}]  %>
-      <% else %>
-        <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+      <%= link_to(profiles_path(old_user)) do %>
+        <% if old_user.profile_picture? %>
+          <%= cl_image_tag old_user.profile_picture.path, class: "avatar-medium", transformation: [
+                      {width: 50, height: 50, crop: "fill"}]  %>
+        <% else %>
+          <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+        <% end %>
       <% end %>
-      <div class="dashboard-friendrequest-name">
-          <h3><%= "#{old_user.first_name} #{old_user.last_name}" %></h3>
-      </div>
+      <%= link_to(profiles_path(old_user)) do %>
+        <div class="dashboard-friendrequest-name">
+            <h3><%= "#{old_user.first_name} #{old_user.last_name}" %></h3>
+        </div>
+      <% end %>
       <div class="dashboard-friendrequest-body">
           <p>
             <%= fr.request_message %>
