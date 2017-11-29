@@ -1,6 +1,5 @@
 .userprofile {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 0 200px;
 }
 
 .userprofile-profile-box {
@@ -9,8 +8,12 @@
 }
 
 .userprofile-avatar-wrapper {
-  margin: 15px 30px 0 30px;
+  margin: 15px 30px 10px 30px;
   text-align: center;
+}
+
+.userprofile-avatar-wrapper h2 {
+  margin-bottom: 32px;
 }
 
 .profile-interests {
@@ -18,11 +21,10 @@
   padding: 15px 0 15px 15px;
   min-height: 260px;
   display: flex;
-  // justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
-  margin-top: 35px;
+  margin-top: 60px;
 }
 
 .profile-interest {
@@ -31,7 +33,7 @@
   padding: 5px;
   border-radius: 5px;
   text-align: center;
-  margin: 5px 5px;
+  margin: 5px 5px 5px 30px;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
   width: 130px;
   height: 58px;
@@ -94,7 +96,7 @@
 }
 
 .userprofile-button {
-  margin: 20px 20% 20px 360px;
+  margin: 20px 20% 30px 390px;
   text-align: center;
 }
 
