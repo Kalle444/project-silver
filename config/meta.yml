@@ -1,0 +1,7 @@
+
+meta_product_name: "amikeco"
+meta_title: "amikeco - make a friend for life"
+meta_description: "Amikeco is a website that connects people from different generations with shared interests whose paths might never have crossed."
+meta_image: "chess_play.jpg"                       # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"
+
