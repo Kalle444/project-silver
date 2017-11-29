@@ -6,7 +6,7 @@
             <%= link_to profile_path(profile) do %>
               <div class="position-relative">
               <div class="blurry">
-                <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path ("interest_wallpaper/" + profile.user_interests.sample.interest.name.downcase + ".jpg").gsub(" ", "_")%>);"></div></div>
+                <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path ("interest_wallpaper_compressed/" + profile.user_interests.first.interest.name.downcase + ".jpg").gsub(" ", "_")%>);"></div></div>
                 <%= cl_image_tag profile.profile_picture.path, class: "profile-avatar", :transformation=>[
                     {:width=>150, :height=>150, :crop=>"fill"}] %>
               </div>
