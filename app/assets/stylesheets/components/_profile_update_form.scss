@@ -1,8 +1,32 @@
+.form-page-container {
+  background-color: white;
+  padding: 50px 100px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.form-box-spacing {
+  margin-top: 25px;
+
+}
+
 .interest-choices {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0;
+  align-content: flex-start;
+
+}
+
+.form-box-height-lg {
+  height: 150px !important;
+
+}
+
+.form-box-inline {
+  display: flex;
+  // justify-content: space-around;
+
 }
 
 .interest-choice {
@@ -12,7 +36,7 @@
   padding: 10px;
   border-radius: 5px;
   flex: 0 0 22%;
-  margin: 5px 5px;
+  margin: 5px 10px 5px 5px;
   text-align: center;
   display:flex;
   align-items: center;
@@ -56,6 +80,13 @@
     }
 }
 
+.form-headline {
+  margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 35px;
+}
+
+
 .form_profile_update {
 
   ul {
@@ -63,6 +94,11 @@
     list-style-type: none;
     padding: 0;
     margin-top: 5px;
+  }
+  label {
+    font-size: 20px;
+    font-family: $headers-font;
+
   }
 }
 .form-interest-icon-circle {
