@@ -22,7 +22,7 @@
     <div class="message-box">
         <div class="confirmation-checkbox"></div>
         <div class="confirmation-message">
-        <p> <%= "#{@friend_request.old_user.first_name} will review your request and let you know when a decision as been made :D"  %>
+        <p> <%= "#{@friend_request.old_user.first_name} will review your request and let you know when a decision has been made :D"  %>
         </p>
          </div>
     </div>
@@ -39,7 +39,8 @@
   <div class="friend-request-box">
     <div class="dashboard-friendrequest">
     <% if @friend_request.old_user.profile_picture? %>
-      <%= cl_image_tag @friend_request.old_user.profile_picture.path, class: "avatar-medium"  %>
+      <%= cl_image_tag @friend_request.old_user.profile_picture.path, class: "avatar-medium", transformation: [
+                        {width: 50, height: 50, crop: "fill"}]  %>
     <% else %>
       <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
     <% end %>

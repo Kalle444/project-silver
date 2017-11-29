@@ -11,3 +11,10 @@ h5,
 h6 {
   font-family: $headers-font;
 }
+
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}

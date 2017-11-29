@@ -1,12 +1,11 @@
+
+
 .dashboard {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 0 100px;
 }
 
 .dashboard-profile-box {
   display: flex;
-  // height: 260px;
-
 }
 
 .dashboard-profile-img {
@@ -41,7 +40,12 @@
   margin: 5px 5px;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
   width: 130px;
-  height: 40px;
+  height: 58px;
+  p {
+    margin: 2px 0 0 0;
+    padding: 0;
+    line-height: 1;
+  }
 }
 
 
@@ -82,7 +86,11 @@
   justify-content: space-between;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
+  img {
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+  }
 }
+
 .dashboard-friendrequest:last-child {
   border-bottom: none;
 }
@@ -92,15 +100,15 @@
   min-width: 100px;
 }
 .dashboard-friendrequest-name h3 {
-  font-size: 13px;
+  font-size: 17px;
   margin-bottom: 0px;
   margin-top: 0px;
 }
-.dashboard-friendrequest-name p {
-  font-size: 13px;
+.dashboard-friendrequest-body p {
+  font-size: 15px;
   font-weight: lighter;
   opacity: 0.6;
-  margin-top: 5px;
+  margin: 0;
 }
 
 .dashboard-friendrequest-body {
@@ -115,12 +123,17 @@
   // color: rgba(0,0,0,0.9);
 }
 .dashboard-friendrequest-body p {
-  margin: 6px 0;
+  margin: 6px 15px;
 }
 .dashboard-friendrequest-status {
   font-size: 14px;
   font-weight: bold;
   margin-right: 10px;
+}
+
+.status {
+  margin-bottom: 0;
+  font-family: "Oswald", "sans-serif"
 }
 .status.accepted {
   color: #04A366;
@@ -129,13 +142,17 @@
   color: red;
 }
 .status.pending {
-  color: lightgrey;
+  color: #949595;
 }
 
 .flex-box-space-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.padding-left {
+  padding-left: 20px;
 }
 
 

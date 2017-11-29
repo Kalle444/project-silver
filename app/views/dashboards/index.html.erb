@@ -1,5 +1,6 @@
 <div class="dashboard">
 
+
 <div class="dashboard-profile-box">
 
   <div class="dashboard-profile_avatar">
@@ -20,18 +21,13 @@
   </div>
 
   <div class="dashboard-interests">
-    <!-- <h4 class="text-center">My Interests</h4><hr> -->
-    <!-- <div class="row"> -->
         <% current_user.user_interests.each do |interest| %>
-          <!-- <div class="col-xs-4"> -->
             <% interest_card = Interest.find(interest.interest_id) %>
               <div class="dashboard-interest">
                 <%= image_tag(interest_card.icon_path, class: "dashboard-interest_icon") %>
-                <%= interest_card.name %>
+                  <p><%= interest_card.name %></p>
               </div>
-            <!-- </div> -->
         <% end %>
-    <!-- </div> -->
   </div>
 
   <div class="dashboard-edit">
@@ -41,8 +37,11 @@
   </div>
 </div>
 
+
 <div class="userprofile-information">
-  <h4>My friend requests</h4>
+  <div class="padding-left">
+    <h4>My friend requests</h4>
+  </div>
     <% current_user.friend_requests_as_young_user.each do |fr| %>
     <% old_user = User.find(fr.old_user_id) %>
     <div class="dashboard-friendrequest">

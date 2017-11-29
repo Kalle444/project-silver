@@ -12,16 +12,17 @@
   padding: 20px;
 }
 
-#profile-bio {
+.profile-bio {
   max-height: 100px;
   overflow: hidden;
+  margin-bottom: 6px;
 }
 
 .profile-banner {
   height: 175px;
   background-size: cover !important;
   background-position: center;
-  filter: grayscale(0.2) blur(1.5px);
+  filter: grayscale(0.65) blur(1.5px);
   // margin: -5px;
 }
 
