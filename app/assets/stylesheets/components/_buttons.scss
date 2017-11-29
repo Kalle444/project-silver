@@ -9,14 +9,8 @@
 
 .get_started_button {
   background-color: $secondary;
-  margin-top: 15px;
-  // padding: 15px;
-  // margin-left: 320px;
-  // margin-right: 320px;
-  // color: white;
-  // width: 40%;
+  margin-top: 25px;
   font-size: 35px;
-  // text-decoration: none !important;
   &:hover {
     background-color: $secondary-hover;
     color: white;

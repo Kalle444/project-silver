@@ -1,164 +1,108 @@
-// BANNER STYLE
+// MAKE A FRIEND FOR LIFE SECTION
 
-.home-headline-banner {
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 15px;
-  text-align: center;
-  position: relative;
-}
-
-.home-headline-banner h1 {
-  font-size: 76px;
-}
-
-.home-banner-top {
-  position: relative;
-  height: 230px;
-  margin-bottom: 285px;
-  background-size: cover !important;
-  background-position: center;
-  background: $teal
-}
-
-.home-avatar-banner {
-  position: absolute;
-  width: 450px;
-  border-radius: 50%;
-  bottom: -250px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-// HOME CARD STYLE
-
-.home-tile {
-  margin: 25px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  h3 {
-    margin-top: 40px;
-  }
-}
-
-.home-tile-banner {
-  position: relative;
-  height: 175px;
-  background-size: cover !important;
-  background-position: center;
-  background: $teal;
-  margin-bottom: 115px;
-}
-
-.home-avatar {
-  position: absolute;
-  width: 250px;
-  border-radius: 50%;
-  bottom: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.better-home-avatar {
-  width: 250px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  margin-top: 20px;
-}
-
-.home-sample-card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 15px;
-  text-align: center;
-  position: relative;
-  h2 {
-    position: absolute;
-    bottom: 40px;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.what-is-amikeco-sample-card {
-  padding: 40px 120px 75px 120px;
-  text-align: center;
-  font-style: $font-dark;
-  background-color: $primary;
+.home-banner-content {
+  background-repeat: no-repeat;
+  margin-bottom: -400px;
   h1 {
-    font-size: 70px;
-    color: white;
-    margin-bottom: 55px;
-  }
-  p{
-    font-size: 25px;
-    color: white;
+    font-size: 150px;
+    margin-bottom: 50px;
+    color: black;
   }
 }
 
-// TESTESTESTSETSETSE
+.home-banner {
+  text-align: center;
+  height: calc(100vh - 70px);
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
-.cake-testimonial-cards {
+// WHAT IS AMIKECO
+
+.what-is-amikeco-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: $background;
 }
 
-.cake-testimonial-contents {
+.what-is-amikeco-content {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 40px 120px 75px 120px;
   flex-direction: column;
-  p {
-    font-size:25px;
-  }
+  h1 {
+   font-size: 70px;
+   color: black;
+   margin-bottom: 34px;
+   margin-top: -5px;
+ }
+ p {
+  font-size:35px;
+}
 }
 
-.cake-testimonial-body-images {
+.what-is-amikeco-image-container {
  position: relative;
  padding: 0 40px;
 }
 
-.cake-better-home-avatars {
+.what-is-amikeco-avatar {
   margin-top: 40px;
   margin-bottom: 40px;
   margin-left: 25px;
   width: 450px;
+}
+
+//SCIENCE IS IN SECTION
+
+.science-is-in-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.science-is-in-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 120px 75px 120px;
+  flex-direction: column;
+  h1 {
+   font-size: 80px;
+   color: black;
+   margin-bottom: 34px;
+   margin-top: -20px;
+ }
+ li {
+  font-size:35px;
+}
+}
+
+.science-is-in-image-container {
+ position: relative;
+ padding: 0 40px;
+}
+
+.science-is-in-avatar {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 25px;
+  width: 450px;
+}
+
+// WHAT MEMBERS ARE SAYING SECTION
+
+.testimonial-avatar {
+  width: 250px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-top: 20px;
 }
-
-// TESTESTESTSETSETSE
-
-
-.the-science-is-in-section {
-  padding: 40px 0px 75px 0px;
-  text-align: center;
-  color: black;
-  background-color: $background;
-  p {
-    font-size: 25px;
-    font-style: black;
-  }
-  h1 {
-    font-size: 70px;
-    margin-bottom: 55px;
-  }
-}
-
-.buttons {
-  text-decoration: none;
-  color: $teal;
-  padding: 2px 6px 2px 6px;
-  margin: 20px 0px;
-  width: 100%;
-  text-align: center;
-}
-
 
 .testimonial-card {
   display: flex;
@@ -168,14 +112,14 @@
   margin-bottom: 20px;
 }
 
-.testimonials-wrapper {
-  background-color: $primary;
+.testimonial-container {
+  background-color: $background;
   padding: 40px 0px 75px 0px;
   h4 {
     font-size: 70px;
     text-align: center;
     margin-bottom: 25px;
-    color: white
+    color: black
   }
 }
 
@@ -184,77 +128,20 @@
   padding: 0 40px;
   p {
     font-size: 25px;
-    color: white;
+    color: black;
   }
 }
 
-.testimonial-body-image {
+.testimonial-image-container {
  position: relative;
  padding: 0 40px;
 }
 
-// FRONT PAGE TOP content:
+// LOGO BULLET POINTS
 
-.cake-testimonial-card {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  // padding: 0 40px;
-  // margin-bottom: 20px;
-  height: 100vh;
-  // position: relative;
-  // padding: 0 40px;
-  // margin-bottom: 20px;
+ul.bridge {
+  list-style-image: image-url('amikeco-stairs.png');
 }
-
-.cake-testimonial-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  h1 {
-    font-size:97px;
-  }
-  // position: relative;
-  // justify-content: center;
-  // padding: 0 40px;
-
-  // p {
-  //   font-size: 25px;
-  //   color: white;
-  // }
-  // position: absolute;
-  // top: 10px;
-  // left: 615px;
-  // p {
-  //   margin-bottom: 50px;
-  //   margin-top: 130px;
-  //   font-size: 100px;
-  // }
-}
-
-.cake-testimonial-body-image {
- position: relative;
- padding: 0 40px;
-}
-
-.cake-better-home-avatar {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 25px;
-  width: 650px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-
-
-
-
-
-
-
-
 
 
 
