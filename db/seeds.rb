@@ -8,11 +8,15 @@ puts "Seeding the database"
 
 # ------------------------------------------Old and young users-----------------------------
 
+# YOUNG USER
 john = User.create(first_name: "John", last_name: "Smith", email: "john@gmail.com", password: "123456", phone_number: "+49 123 456 78",
   bio: "Spent 5 years working with business development and marketing in large multination companies in Copenhagen (Novo Nordisk & Coloplast). Prior to that I studied business administration and management in several countries around the world on a bachelor and master level (Sweden, Canada, South Korea, Netherlands, Australia, Singapore). I want to take the leap into the world of tech. I absolutely love programming and want to get a position as a developer when I finish the program. I have an interest and passion for how we can drive positive social change in the world through technology. I believe technology can help build more sustainable and inclusive societies – the tech world is moving fast and I want to be part of shaping its path. I am particularly interested in AI technology and IoT.",
   motivation: "I always spent a lot of time with my grandparents, but since we moved away, I am missing the company of people, which have a totally differnt view on things and story than I have. That is why i would really like to spend time with someone with so much life experience and stories as they have.",
   location: "Pilekrogen 1, 2730 Herlev",
   profile_picture_url: "https://cdn.shopify.com/s/files/1/0691/5403/t/141/assets/avatar-dhg.png?3166923016212737268")
+
+
+# ----------------OLD USERS--------------------------------------------
 
 bill = User.create(first_name: "Bill", last_name: "Murray", email: "bill@gmail.com", password: "123456",
   bio: "Born in 1950 in Illinois, I eventually relocated to New York City, where I took my comedic talents to radio's National Lampoon Hour. In 1975, I was in an off-Broadway spin-off of the comedy radio show when Howard Cosell recruited me for a show called Saturday Night Live. Meanwhile, Lorne Michaels had his own Saturday Night Live running concurrently, and when I joined the cast in 1976, I began crafting the comedic persona that became my calling card for many films to come, from Stripes to Caddyshack. In my later career, I took on more seriocomic roles in many of director Wes Anderson's movies, as well as Sofia Coppola’s Lost in Translation (2003), which earned me an Oscar nomination for best actor.",
@@ -87,7 +91,6 @@ gardening = Interest.create(name: "gardening".capitalize, icon_path: "interest_i
 singing = Interest.create(name: "singing".capitalize, icon_path: "interest_icons/singing.png" )
 golf = Interest.create(name: "golf".capitalize, icon_path: "interest_icons/golf.png" )
 dogs = Interest.create(name: "dogs".capitalize, icon_path: "interest_icons/dog.png" )
-hiking = Interest.create(name: "hiking".capitalize, icon_path: "interest_icons/hiking.png" )
 
 #-----------------------------------------Assigning Interests to Users----------------------------------------------
 

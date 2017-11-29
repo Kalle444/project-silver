@@ -13,12 +13,24 @@
     <% end -%>
   <% end -%>
 
+
+
   <%- if controller_name != 'sessions' %>
-    <%= link_to "Log in", new_session_path(resource_name), class: "login_button" %><br />
+    <div class="log_in_button_wrapper">
+      <%= link_to new_session_path(resource_name) do %>
+        <div class="log_in_button">Log in</div>
+      <% end %>
+    </div>
   <% end -%>
 
+
+
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-    <%= link_to "Sign up", new_registration_path(resource_name), class: "sign_up_button" %><br />
+    <div class="sign_up_button_wrapper">
+      <%= link_to new_registration_path(resource_name) do%>
+        <div class="sign_up_button">Sign up</div>
+      <% end %>
+    </div>
   <% end -%>
 
   <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

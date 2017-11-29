@@ -26,16 +26,41 @@
 .sign_up_button {
   border: 1px solid $primary;
   background-color: $primary;
-  padding: 15px;
   color: white;
   box-shadow: 0 0 3px rgba(0,0,0,0.5);
-  width: 40%;
-  text-decoration: none !important;
+  width: 100%;
+  padding: 15px;
   &:hover {
+    border-color: $primary-hover;
     background-color: $primary-hover;
     color: white;
   }
 
+}
+
+.sign_up_button_wrapper {
+  width: 40%;
+  text-decoration: none !important;
+}
+
+.log_in_button {
+  border: 1px solid $primary;
+  background-color: $primary;
+  color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  width: 100%;
+  padding: 15px;
+  &:hover {
+    border-color: $primary-hover;
+    background-color: $primary-hover;
+    color: white;
+  }
+
+}
+
+.log_in_button_wrapper {
+  width: 40%;
+  text-decoration: none !important;
 }
 
 .orange-button {
@@ -54,7 +79,7 @@
   padding: 15px;
   color: white;
   height: 100%;
-  margin-right: 0;
+  margin-right: -1px;
 }
 
 #google_g {
