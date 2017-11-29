@@ -2,30 +2,26 @@
 
 <div class="userprofile-profile-box">
 
-  <div class="userprofile-avatar">
-    <% if @profile.profile_picture %>
-                <% avatar_url = @profile.profile_picture.path %>
-            <% else %>
-                <% avatar_url = "face_dsncrt.jpg"  %>
-            <% end %>
-    <%= cl_image_tag avatar_url, class: "avatar-XXlarge", style: "box-shadow: 0 0 9px rgba(0,0,0,0.6);", :transformation=>[
-                    {:width=>280, :height=>280, :crop=>"fill"}] %>
-  </div>
-
-  <div class="userprofile-interests">
+  <div class="userprofile-avatar-wrapper">
     <h2><%= "#{@profile.first_name} #{@profile.last_name}" %></h2>
-
-    <div class="row">
-        <% @profile.user_interests.each do |interest| %>
-          <div class="col-xs-4">
-            <% interest_card = Interest.find(interest.interest_id) %>
-              <div class="userprofile-interest">
-                <%= image_tag(interest_card.icon_path, class: "userprofile-interest_icon") %>
-                <%= interest_card.name %>
-              </div>
-            </div>
-        <% end %>
+    <div class="userprofile-avatar">
+      <% if @profile.profile_picture %>
+                  <% avatar_url = @profile.profile_picture.path %>
+              <% else %>
+                  <% avatar_url = "face_dsncrt.jpg"  %>
+              <% end %>
+      <%= cl_image_tag avatar_url, class: "avatar-XXlarge", style: "box-shadow: 0 0 9px rgba(0,0,0,0.6);", :transformation=>[{:width=>280, :height=>280, :crop=>"fill"}] %>
     </div>
+</div>
+
+  <div class="profile-interests">
+    <% @profile.user_interests.each do |interest| %>
+    <% interest_card = Interest.find(interest.interest_id) %>
+      <div class="profile-interest">
+        <%= image_tag(interest_card.icon_path, class: "profile-interest_icon") %>
+        <p><%= interest_card.name %></p>
+      </div>
+    <% end %>
   </div>
 
 </div>
