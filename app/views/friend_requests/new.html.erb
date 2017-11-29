@@ -1,9 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <div class="friend_request-form">
+      <h2 class="form-headline"><%= " Write a nice message for #{@profile.first_name
+}" %> </h2>
       <%= simple_form_for [@profile, @friend_request], url: profile_friend_requests_path(@profile)  do |f| %>
-        <%= f.input :request_message, placeholder: "Let your new friend know why you want to meet" %>
+        <div class="form-group text required friend_request_request_message">
+          <textarea class="form-control text required form-box-height-lg form-box-font-size-lg" placeholder="Let your new friend know why you want to meet" name="friend_request[request_message]" id="friend_request_request_message"></textarea></div>
         <%= f.submit "Make contact", class: "btn btn-primary btn-block submit-button" %>
       <% end %>
       </div>

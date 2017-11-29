@@ -1,38 +1,63 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="form_profile_update">
-        <%= simple_form_for @profile, url: profile_path(@profile) do |f| %>
-        <%= f.hidden_field :first_name %>
-        <%= f.hidden_field :last_name %>
-        <%= f.hidden_field :email %>
-        <%= f.input :profile_picture, as: :attachinary %>
-        <%= f.input :phone_number %>
-        <%= f.input :bio %>
-        <%= f.input :motivation %>
-        <%= f.input :location %>
-        <%= f.input :background_picture, as: :attachinary %>
-        <div class="form-group">
-          <label class="control-label check_boxes optional">Interest</label>
-          <input type="hidden" name="user[interest_ids][]" value="">
-          <div class="interest-choices">
-            <% Interest.all.each do |interest| %>
-              <input type="checkbox" class="hidden"  value="<%= interest.id %>" name="user[interest_ids][]"
-              id="user_interest_ids_<%= interest.id %>">
-              <label class="interest-choice" for="user_interest_ids_<%= interest.id %>">
-                <div class="form-interest-icon-circle">
-                <%= image_tag(interest.icon_path, class: "form-interest-icon") %>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <div class="form-page-container">
+        <h2 class="form-headline">Update your profile</h2>
+          <div class="form_profile_update">
+            <%= simple_form_for @profile, url: profile_path(@profile) do |f| %>
+            <%= f.hidden_field :first_name %>
+            <%= f.hidden_field :last_name %>
+            <%= f.hidden_field :email %>
+            <div class="form-box-spacing">
+              <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <%= f.input :profile_picture, as: :attachinary, class: "form-box-font-size-lg" %>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="form-group tel optional user_phone_number"><label class="control-label tel optional" for="user_phone_number">Phone number</label><input class="form-box-font-size-lg form-control string tel optional" type="tel" value="<%= @profile.phone_number %>" name="user[phone_number]" id="user_phone_number">
                 </div>
-                <span class="form-interest-name">
-                <%= interest.name %>
-                </span>
-              </label>
+              </div>
+              </div>
+            </div>
+            <div class="form-group form-box-spacing text optional user_bio">
+              <label class="control-label text optional" for="user_bio">Biography</label>
+              <textarea class="form-control text optional form-box-height-lg form-box-font-size-lg" name="user[bio]" id="user_bio"><%= @profile.bio %></textarea></div>
+            <div class="form-group form-box-spacing text optional user_bio">
+              <label class="control-label text optional" for="user_bio">Motivation</label>
+              <textarea class="form-control text optional form-box-height-lg form-box-font-size-lg" name="user[bio]" id="user_bio"><%= @profile.motivation %></textarea>
+            </div>
+            <div class="form-box-spacing">
+              <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="form-group string optional user_location"><label class="control-label string optional" for="user_location">Location</label><input class="form-box-font-size-lg form-control string optional" type="text" value="<%= @profile.location %>" name="user[location]" id="user_location"></div>
+                </div>
+              <div class="col-xs-12 col-sm-6">
+                <%= f.input :background_picture, as: :attachinary, class: "form-box-font-size-lg"  %>
+              </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label check_boxes optional">Interest</label>
+              <input type="hidden" name="user[interest_ids][]" value="">
+              <div class="interest-choices">
+                <% Interest.all.each do |interest| %>
+                  <input type="checkbox" class="hidden"  value="<%= interest.id %>" name="user[interest_ids][]"
+                  id="user_interest_ids_<%= interest.id %>">
+                  <label class="interest-choice" for="user_interest_ids_<%= interest.id %>">
+                    <div class="form-interest-icon-circle">
+                    <%= image_tag(interest.icon_path, class: "form-interest-icon") %>
+                    </div>
+                    <span class="form-interest-name">
+                    <%= interest.name %>
+                    </span>
+                  </label>
+                <% end %>
+              </div>
+            </div>
+            <%= f.submit "Update", class: "btn btn-primary btn-block submit-button" %>
             <% end %>
           </div>
         </div>
-        <%= f.submit "Update", class: "btn btn-primary btn-block submit-button" %>
-        <% end %>
-      </div>
     </div>
   </div>
 </div>
