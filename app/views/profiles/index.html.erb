@@ -27,7 +27,7 @@
 <!-- Filter window with interest cards -->
 
   <div class="filter-window-wrapper">
-    <%= simple_form_for :filter, method: "post", html: { id: :apply_interest_filter } do |f| %>
+    <%= simple_form_for :filter, remote: true, method: "get", html: { id: :apply_interest_filter } do |f| %>
       <input id="location_search" name="location" type="hidden" value="<%= @location %>">
       <input type="hidden" name="filter[interest_ids][]" value="">
       <div class="filter-window">
@@ -35,8 +35,8 @@
         <h4>Select your interests</h4>
       </div>
         <% @interests.each do |interest| %>
-            <input class="check_boxes required hidden" type="checkbox" value="<%= interest.id %>" name="filter[interest_ids][]" id="filter_interest_ids_<%= interest.id %>">
-          <label class="filter-interest-choice" for="filter_interest_ids_<%= interest.id %>">
+            <input class="check_boxes required filter-interest-choice hidden" type="checkbox" value="<%= interest.id %>" name="filter[interest_ids][]" id="filter_interest_ids_<%= interest.id %>">
+          <label class="filter-interest-choice-style" for="filter_interest_ids_<%= interest.id %>">
             <div class="search-interest-icon-circle">
               <%= image_tag(interest.icon_path, class: "search-interest-icon") %>
             </div>
@@ -112,14 +112,15 @@
 
   // --------------------------------FILTER LOGIC --------------------------------
 
-  $(".filter-interest-choice").click(function(){
+  $(".filter-interest-choice-style").click(function(){
     $(this).toggleClass("active");
   });
 
 
   $(".filter-interest-choice").click(function() {
-    $("#apply_interest_filter").submit();
-  })
+    console.log(this.value);
+    $("#apply_interest_filter").trigger("submit");
+  });
 
   </script>
 <% end %>

@@ -83,6 +83,7 @@ class ProfilesController < ApplicationController
     UserInterest.where(user: profile).each do |ui|
       profileInterests << ui.interest.id
     end
+    # raise selectedInterests.inspect
     return profileInterests & selectedInterests
   end
 end
