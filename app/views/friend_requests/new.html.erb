@@ -7,7 +7,7 @@
       <%= simple_form_for [@profile, @friend_request], url: profile_friend_requests_path(@profile)  do |f| %>
         <div class="form-group text required friend_request_request_message">
           <textarea class="form-control text required form-box-height-lg form-box-font-size-lg" placeholder="Let your new friend know why you want to meet" name="friend_request[request_message]" id="friend_request_request_message"></textarea></div>
-        <%= f.submit "Make contact", class: "btn btn-primary btn-block submit-button" %>
+        <%= f.submit "Make contact", class: "btn btn-block action-button" %>
       <% end %>
       </div>
     </div>
