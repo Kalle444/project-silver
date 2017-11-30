@@ -14,10 +14,7 @@
     h1 {
       font-size: 40px;
     }
-
-
 }
-
 
 .confirmation-checkbox {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
@@ -25,10 +22,14 @@
   height: 60px;
   width: 60px;
   border-radius: 5px;
-  background-color: white;
+  // background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#confirmation-checked {
+  background-color: white;
 }
 
 .check-mark {
@@ -51,6 +52,9 @@
 .confirmation-message {
   margin-left: 20px;
   font-size: 18px;
+  p {
+    font-size: 25px;
+  }
 }
 
 .confirmation-button-box {
@@ -61,6 +65,12 @@
 .confirmation-buttons {
   padding: 8px 10px;
   width: 45%;
+}
 
+#pending-size {
+  font-size: 15px;
+}
 
+#friend-name {
+  font-size: 15px;
 }
