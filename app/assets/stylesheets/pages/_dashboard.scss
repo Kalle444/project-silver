@@ -1,5 +1,5 @@
 .dashboard {
-  padding: 0 100px;
+  padding: 0 200px;
 }
 
 .dashboard-profile-box {
@@ -68,14 +68,12 @@
 }
 
 .dashboard-bio {
-  margin-bottom: 50px;
-  margin-top: 15px;
+  margin: 15px 15px 50px 15px;
 }
 
 .dashboard-motivation {
   padding-bottom: 20px;
-  // border-bottom: 2px solid #B0BEC5;
-
+  margin: 0 15px;
 }
 
 .dashboard-friendrequest {
@@ -86,6 +84,9 @@
   border-bottom: 1px solid rgba(220,224,244,0.4);
   img {
     box-shadow: 0 0 6px rgba(0,0,0,0.5);
+  }
+  p {
+    margin: 0;
   }
 }
 
