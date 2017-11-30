@@ -10,19 +10,18 @@ puts "Seeding the database"
 # ------------------------------------------Old and young users-----------------------------
 
 # YOUNG USER
-john = User.create(first_name: "John", last_name: "Smith", email: "john@gmail.com", password: "123456", phone_number: "+49 123 456 78",
-  bio: "Spent 5 years working with business development and marketing in large multination companies in Copenhagen (Novo Nordisk & Coloplast). Prior to that I studied business administration and management in several countries around the world on a bachelor and master level (Sweden, Canada, South Korea, Netherlands, Australia, Singapore). I want to take the leap into the world of tech. I absolutely love programming and want to get a position as a developer when I finish the program. I have an interest and passion for how we can drive positive social change in the world through technology. I believe technology can help build more sustainable and inclusive societies – the tech world is moving fast and I want to be part of shaping its path. I am particularly interested in AI technology and IoT.",
-  motivation: "I always spent a lot of time with my grandparents, but since we moved away, I am missing the company of people, which have a totally differnt view on things and story than I have. That is why i would really like to spend time with someone with so much life experience and stories as they have.",
+karl = User.create(first_name: "Karl", last_name: "Bergstrom", email: "karl@gmail.com", password: "123456", phone_number: "+49 123 456 78",
+  bio: "I am a 29 year old Swedish guy that recently moved to Copenhagen to study web development at the bootcamp Le Wagon. I am a big fan of soccer and like to watch as many game as I possible can find time for. When I am not watching soccer you can either find me on the golf course or playing games with my friends. I like to travel and I have lived in several different countries during  my five years of studies (Sweden, Canada, South Korea, Netherlands, Australia, Singapore). I speak Swedish, Danish and English so I am sure we can find a way to communicate. I am an easy going guy that loves meeting new people.",
+  motivation: "I recently moved to Copenhagen from my home town Västerås. Sadly my friends and family are still in Västerås leaving me to find new friends here in Copenhagen. I have always spent a lot of time with my grandparents and since moving away I am really missing their company. I think it is so important for people to socialise across generations as we have so much to learn from each other. I am a guy with lots of energy that enjoy a good game of golf or why not a game of chess. I am hoping to meet some new friends here on Amikeco so don’t hesitate to get in touch!",
   location: "Nørrebrogade 174, 2200 København N",
-  profile_picture_url: "http://4.bp.blogspot.com/-Eayf2puE1cA/TdOLyOMW7cI/AAAAAAAAM5o/ll6_7PZ5-Vo/s800/a1.jpg")
-
+  profile_picture_url: "http://res.cloudinary.com/karlbergstrom/image/upload/v1512056189/af5gzsooie6eyz4eqrwg.jpg")
 
 # ----------------OLD USERS--------------------------------------------
 
 # ----------------OLD USERS--COPENHAGEN--------------------------------
 
 christopher = User.create(first_name: "Christopher", last_name: "Washington", email: "christopher@gmail.com", password: "123456",
-  bio: "Born in 1950 in Illinois, I eventually relocated to New York City, where I took my comedic talents to radio's National Lampoon Hour. In 1975, I was in an off-Broadway spin-off of the comedy radio show when Howard Cosell recruited me for a show called Saturday Night Live. Meanwhile, Lorne Michaels had his own Saturday Night Live running concurrently, and when I joined the cast in 1976, I began crafting the comedic persona that became my calling card for many films to come, from Stripes to Caddyshack. In my later career, I took on more seriocomic roles in many of director Wes Anderson's movies, as well as Sofia Coppola’s Lost in Translation (2003), which earned me an Oscar nomination for best actor.",
+  bio: "Born in 1950 in Aarhus, I eventually relocated to Copenhagen, where I took my comedic talents to Politiken and wrote a weekly humorous advice columm. In 1995, I decided to slow things down and retired. I bought a farm in Jylland and I regularly take trips over on the weekends.",
   motivation: "",
   location: "Thorsgade 55, 2200 København N",
   young: false,
@@ -57,7 +56,7 @@ mathilde = User.create(first_name: "Mathilde", last_name: "Hesse", email: "mathi
   young: false,
   profile_picture_url: "https://pbs.twimg.com/media/BnXSEwjCAAE2cUW.jpg")
 
-sunny = User.create(first_name: "Sunny", last_name: "Yeung", email: "sunny@gmail.com", password: "123456",
+sunny = User.create(first_name: "Sunny", last_name: "Nguyen", email: "sunny@gmail.com", password: "123456",
   bio: "I was born October 8, 1941, in Greenville, South Carolina. While an undergraduate, I became involved in the civil rights movement. In 1965, I went to Selma, Alabama, to march with Dr. Martin Luther King Jr. In the 1980s, I became a leading national spokesman for African Americans. I was later appointed special envoy to Africa, and in 2000 I was awarded the Presidential Medal of Freedom.",
   motivation: "",
   location: "Kristianiagade 16, 2100 København Ø",
@@ -65,8 +64,8 @@ sunny = User.create(first_name: "Sunny", last_name: "Yeung", email: "sunny@gmail
   profile_picture_url: "https://ak5.picdn.net/shutterstock/videos/12335255/thumb/1.jpg?i10c=img.resize(height:160)")
 
 johan = User.create(first_name: "Johan", last_name: "Strauss", email: "johan@gmail.com", password: "123456",
-  bio: "I was born on June 22, 1949, in Summit, New Jersey. I began my career on the New York stage in the late 1960s and appeared in several Broadway productions. I transitioned to films in the 1970s and soon I began earning major accolades, eventually winning Oscars for Kramer vs. Kramer, Sophie's Choice and The Iron Lady, among a league of nominations. Equally able to wow audiences in drama, comedy and musicals, I have come to be considered one of the greatest actresses of our time.",
-  motivation: "",
+  bio: "I was born on June 22, 1949, in Västerås, Sweden. I began my career as an actor on the Stockholm stage in the late 1960s and appeared in several productions. I transitioned to television in the 1970s and soon I began landing major roles. In the late 80s I moved to Copenhagen to be closer to my grandchildren and I am currently staring in Det Ny Teater's production of Annie Get Your Gun.",
+  motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Indre By, Kopenhagen",
   young: false,
   profile_picture_url: "https://images.pexels.com/photos/53159/man-old-fisherman-portrait-53159.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
@@ -102,7 +101,7 @@ patrice = User.create(first_name: "Patrice", last_name: "Okafor", email: "patric
   young: false,
   profile_picture_url: "https://thoughtcatalog.files.wordpress.com/2014/08/shutterstock_27256408.jpg?w=786&h=524")
 
-mesut = User.create(first_name: "Mesut", last_name: "Ekmekci", email: "sunny@gmail.com", password: "123456",
+mesut = User.create(first_name: "Mesut", last_name: "Ekmekci", email: "mesut@gmail.com", password: "123456",
   bio: "I was born October 8, 1941, in Greenville, South Carolina. While an undergraduate, I became involved in the civil rights movement. In 1965, I went to Selma, Alabama, to march with Dr. Martin Luther King Jr. In the 1980s, I became a leading national spokesman for African Americans. I was later appointed special envoy to Africa, and in 2000 I was awarded the Presidential Medal of Freedom.",
   motivation: "",
   location: "Jungfernstieg 38, 20354 Hamburg, Germany",
@@ -146,13 +145,10 @@ dogs = Interest.create(name: "dogs".capitalize, icon_path: "interest_icons/dog.p
 
 #------------COPENHAGEN--USER--INTERESTS------------------
 
-UserInterest.create(user: john, interest: soccer)
-UserInterest.create(user: john, interest: chess)
-UserInterest.create(user: john, interest: rock_and_roll)
-UserInterest.create(user: john, interest: piano)
-UserInterest.create(user: john, interest: bowling)
-UserInterest.create(user: john, interest: singing)
-
+UserInterest.create(user: karl, interest: soccer)
+UserInterest.create(user: karl, interest: golf)
+UserInterest.create(user: karl, interest: chess)
+UserInterest.create(user: karl, interest: board_games)
 
 UserInterest.create(user: christopher, interest: baking)
 UserInterest.create(user: christopher, interest: movies)
