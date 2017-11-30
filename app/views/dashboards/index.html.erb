@@ -45,7 +45,7 @@
     <% current_user.friend_requests_as_young_user.each do |fr| %>
     <% old_user = User.find(fr.old_user_id) %>
     <div class="dashboard-friendrequest">
-      <%= link_to(profiles_path(old_user)) do %>
+      <%= link_to(profile_path(old_user)) do %>
         <% if old_user.profile_picture? %>
           <%= cl_image_tag old_user.profile_picture.path, class: "avatar-medium", transformation: [
                       {width: 50, height: 50, crop: "fill"}]  %>
@@ -53,7 +53,7 @@
           <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
         <% end %>
       <% end %>
-      <%= link_to(profiles_path(old_user)) do %>
+      <%= link_to(profile_path(old_user)) do %>
         <div class="dashboard-friendrequest-name">
             <h3><%= "#{old_user.first_name} #{old_user.last_name}" %></h3>
         </div>
@@ -64,7 +64,7 @@
           </p>
         </div>
         <div class="dashboard-friendrequest-status">
-          <p class="status pending">Pending</p>
+          <p class="status <%=fr.status%>"><%= fr.status %></p>
         </div>
     </div>
     <% end %>

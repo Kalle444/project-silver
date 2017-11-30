@@ -1,3 +1,4 @@
+<div class="confirmation-main-body-container">
 <div class="confirmation-page-container">
   <div class="congratulation-message text-center">
     <h1><%= "Congratulations #{current_user.first_name}!" %></h1>
@@ -52,14 +53,14 @@
         </p>
       </div>
       <div class="dashboard-friendrequest-status">
-        <p class="status pending">Pending</p>
+        <p class="status <%=@friend_request.status%>"><%= @friend_request.status %></p>
       </div>
     </div>
   </div>
 
-  <div class="action-buttons">
-    <%= link_to "Go to my profile", dashboards_path, class: "btn orange-button confirmation-buttons" %>
-    <%= link_to "Continue searching for friends", profiles_path, class: "btn orange-button confirmation-buttons" %>
+  <div class="confirmation-button-box">
+    <%= link_to "Go to my profile", dashboards_path, class: "btn action-button confirmation-buttons" %>
+    <%= link_to "Continue searching for friends", profiles_path, class: "btn action-button confirmation-buttons" %>
   </div>
-
+</div>
 </div>

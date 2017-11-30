@@ -250,7 +250,6 @@ UserInterest.create(user: emma, interest: movies)
 # FriendRequest.create(young_user: john, old_user: jesse, request_message: "Dear Jesse, I have seen on your profile, that you are a soccer fan. I am playing almost every weekend, maybe you could come and watch (in Nørrebro). Aftewards we could grab a drink, if you would like that. Best, John")
 # FriendRequest.create(young_user: john, old_user: bill, request_message: "Dear Bill, I found your bio to be really interesting, because I am also aspiring to become an actor just like you. Do you maybe want to meet up one day for a walk and talk a bit? Best regards, John")
 
-
 # FriendReqsuest.create(young_user: john, old_user: jeffrey, request_message: "Hi Jeffrey! I have seen, you are interested in board games and chess, just like I am. Do you want to play a round of chess next Tuesday? Looking forward to hear from you. Best, John")
 
 puts "Seeding done"

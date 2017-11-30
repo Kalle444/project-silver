@@ -8,7 +8,6 @@ class ProfilesController < ApplicationController
     @radius = 20
     @interests = Interest.all
     @profiles_interest = return_profiles_based_on_location(@location, @radius)
-    # raise
     if params.has_key? "filter"
       @selected_interests = params[:filter][:interest_ids]
       @profiles_interest = return_profiles_based_on_interests(@profiles_interest)
@@ -22,7 +21,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @friend_request = FriendRequest.where(young_user: current_user, old_user: @profile).exists?
+    @friend_request = FriendRequest.find_by(young_user: current_user, old_user: @profile)
   end
 
   def edit

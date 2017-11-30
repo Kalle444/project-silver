@@ -1,3 +1,14 @@
+.action-button {
+    background-color: $secondary;
+    border: none;
+    height: 40px;
+    color: white;
+    &:hover {
+      background-color: $secondary-hover;
+      color: white;
+    }
+}
+
 .generic_button {
   color: white;
   padding: 20px 25px;
@@ -7,10 +18,16 @@
   font-size: 26px;
 }
 
+#get_started_link {
+  width: 200px;
+  margin: 30px auto;
+}
+
 .get_started_button {
   background-color: $secondary;
-  margin-top: 25px;
-  font-size: 35px;
+  font-size: 20px;
+  padding: 20px 40px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
   &:hover {
     background-color: $secondary-hover;
     color: white;
