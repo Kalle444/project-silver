@@ -4,11 +4,11 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update]
 
   def index
+    # raise
     @location = params[:location]
     @radius = 20
     @interests = Interest.all
     @profiles_interest = return_profiles_based_on_location(@location, @radius)
-    # raise
     if params.has_key? "filter"
       @selected_interests = params[:filter][:interest_ids]
       @profiles_interest = return_profiles_based_on_interests(@profiles_interest)
