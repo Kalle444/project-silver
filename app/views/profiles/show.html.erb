@@ -28,7 +28,7 @@
 
 <div class="userprofile-button">
     <% if  @friend_request %>
-      <h3 class="orange-text">Friend request pending</h3>
+      <h3 class="status <%=@friend_request.status%>">Friend request <%= @friend_request.status.downcase %></h3>
     <% else %>
       <div class="orange-button-request">
         <%= link_to(new_profile_friend_request_path(@profile))  do %>
