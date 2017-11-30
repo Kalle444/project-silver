@@ -4,7 +4,6 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update]
 
   def index
-    # raise
     @location = params[:location]
     @radius = 20
     @interests = Interest.all
