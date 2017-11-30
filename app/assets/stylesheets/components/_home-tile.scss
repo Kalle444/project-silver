@@ -2,47 +2,121 @@
 
 .home-banner-content {
   background-repeat: no-repeat;
-  margin-bottom: -400px;
+  margin-top: 180px;
   h1 {
-    font-size: 150px;
+    font-size: 90px;
     margin-bottom: 50px;
-    color: black;
+    color: white;
+    // text-shadow: 0 0 8px rgba(0,0,0,0.3);
   }
 }
 
 .home-banner {
   text-align: center;
   height: calc(100vh - 70px);
+  min-height: 700px;
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
+}
+
+.arrow-down {
+  position: absolute;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 150px;
+  font-size: 100px;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.3);
+  &:hover {
+    color: #BEBEC1;
+    cursor: pointer;
+  }
+}
+
+#second-arrow-down {
+  margin-top: 40px;
+}
+
+#third-arrow-down {
+  margin-top: -30px;
 }
 
 // WHAT IS AMIKECO
 
 .what-is-amikeco-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: $background;
+  // display: flex;
+  // justify-content: space-around;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 750px;
+  min-width: 1300px;
+  background-color: #FFF3F0;
+  h1 {
+    margin: 0;
+  }
 }
 
+.what-is-amikeco-headline {
+  text-align: center;
+  padding-top: 30px;
+  background-color: $primary-hover;
+  color: white;
+}
+
+.what-is-amikeco-subheadline {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: $primary-hover;
+  color: $primary;
+  border-bottom: 4px solid white;
+}
 .what-is-amikeco-content {
+  margin: 50px 40px 0 40px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding: 40px 120px 75px 120px;
-  flex-direction: column;
-  h1 {
-   font-size: 70px;
-   color: black;
-   margin-bottom: 34px;
-   margin-top: -5px;
- }
- p {
-  font-size:35px;
+  // align-items: center;
 }
+
+.what-is-amikeco-card {
+  background-color: rgba(255,255,255,0.9);
+  width: 30%;
+  min-height: 370px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+  padding: 30px 20px;
+  p {
+    font-size: 16px;
+  }
+}
+
+.what-is-amikeco-avatar {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card_amikeco_avatar {
+  border-radius: 50%;
+  width: 100px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.what-is-amikeco-card-head {
+  text-align: center;
+  color: $secondary;
+  margin-bottom: 15px;
+}
+
+.what-is-amikeco-card-body{
+  display: flex;
+  align-items: center;
 }
 
 .what-is-amikeco-image-container {
@@ -50,37 +124,93 @@
  padding: 0 40px;
 }
 
-.what-is-amikeco-avatar {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 25px;
-  width: 450px;
-}
+
 
 //SCIENCE IS IN SECTION
 
 .science-is-in-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  height: 100vh;
+  min-height: 780px;
   background-color: white;
+    h1 {
+    margin: 0;
+  }
+}
+
+.scienece-is-in-headline {
+  text-align: center;
+  padding-top: 30px;
+  background-color: $secondary;
+  color: white;
+}
+
+.scienece-is-in-subheadline {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: $secondary;
+  color: white;
+  border-bottom: 4px solid $secondary-hover;
+  margin-bottom: 15px;
 }
 
 .science-is-in-content {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px 120px 75px 120px;
   flex-direction: column;
-  h1 {
-   font-size: 80px;
-   color: black;
-   margin-bottom: 34px;
-   margin-top: -20px;
- }
- li {
-  font-size:35px;
+  justify-content: center;
+  align-items: center;
 }
+
+.science-box {
+  display: flex;
+  min-width: 1000px;
+  border-radius: 10px;
+  justify-content: space-between;
+  background-color: $primary;
+  border: 3px solid $primary-hover;
+  max-length: 995px !important;
+  color: white;
+  position: relative;
+  margin: 25px 30px 25px 50px;
+  padding: 0 0 0 100px;
+  h3 {
+    margin: 20px 0;
+    padding: 0;
+  }
+  h4 {
+    padding: 0;
+    margin: 24px 0;
+  }
+}
+
+.box-icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  border: 3px solid $primary;
+  position: absolute;
+  left: -20px;
+  top: -12px;
+}
+
+.icon-avatar {
+  width: 60px;
+}
+
+.read-up-right {
+  width: 200px;
+  background-color: $primary-hover;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  h4 {
+    color: white;
+  }
+  &:hover {
+    background-color: $primary;
+  }
 }
 
 .science-is-in-image-container {
@@ -97,11 +227,39 @@
 
 // WHAT MEMBERS ARE SAYING SECTION
 
+.testimonial-headline {
+  text-align: center;
+  padding-top: 30px;
+  background-color: $primary-hover;
+  color: white;
+}
+
+.testimonial-subheadline {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  background-color: $primary-hover;
+  color: $primary;
+  border-bottom: 4px solid white;
+}
+
+.testimonial-container {
+  height: 100vh;
+  min-height: 780px;
+  background-color: #FCF0EC;
+  padding: 0 0px 75px 0px;
+  h1 {
+    margin: 0;
+  }
+}
+
 .testimonial-avatar {
-  width: 250px;
+  width: 180px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .testimonial-card {
@@ -109,27 +267,10 @@
   justify-content: space-around;
   align-items: center;
   padding: 0 40px;
-  margin-bottom: 20px;
-}
-
-.testimonial-container {
-  background-color: $background;
-  padding: 40px 0px 75px 0px;
-  h4 {
-    font-size: 70px;
-    text-align: center;
-    margin-bottom: 25px;
-    color: black
-  }
-}
-
-.testimonial-content {
-  position: relative;
-  padding: 0 40px;
-  p {
-    font-size: 25px;
-    color: black;
-  }
+  margin: 0px 30px 20px 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
 
 .testimonial-image-container {

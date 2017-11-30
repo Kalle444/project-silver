@@ -2,49 +2,144 @@
 
 <div class="home-banner" style="background-image: linear-gradient(-1000deg, rgba(252,74,26,0.3) 25%, rgba(247,183,51,0.3) 75%), url('<%= image_path "owl2.jpg" %>');">
   <div class="home-banner-content">
-    <h1><strong>Make a friend for life.</strong></h1>
-    <%= link_to "Get started", "#", class: "generic_button get_started_button" %>
+    <h1>Make a friend for life.</h1>
+    <div id="get_started_link">
+      <%= link_to search_path do %>
+        <div class="generic_button get_started_button">Get started</div>
+       <% end %>
+     </div>
+    <div id="first-arrow-down" class="arrow-down">
+      <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+    </div>
   </div>
 </div>
 
 <!-- WHAT IS AMIKECO -->
 
 <div class="what-is-amikeco-container">
+  <div class="what-is-amikeco-headline">
+    <h1><strong>Connecting people from different generations</strong></h1>
+  </div>
+  <div class="what-is-amikeco-subheadline">
+    <h3>What is amikeco?</h3>
+  </div>
+
   <div class="what-is-amikeco-content">
-   <h1><strong>What is Amikeco?</strong></h1>
-   <p>
-    Harry and Hagrid, Marty and Doc, Daniel and Mr. Miyagi... What do all these people have in common? They all understand that age is just a number and quality friendships are based on more than just the age on your birth certificate. Amikeco is a service that connects people from the community with shared interests whose paths might never have crossed.
-  </p>
+
+    <div class="what-is-amikeco-card">
+      <div class="what-is-amikeco-avatar">
+        <%= image_tag "avatar_elderly.png", class: "card_amikeco_avatar" %>
+      </div>
+      <div class="what-is-amikeco-card-head">
+        <h3>Commonality</h3>
+      </div>
+      <p>After retirement many seniors lose connection to close people around them. A big amount of them would <strong>enjoy company outside of their regular routine.</strong> Someone who they could let partake in their stories and life experience.</p>
+    </div>
+
+    <div class="what-is-amikeco-card">
+      <div class="what-is-amikeco-avatar">
+        <%= image_tag "avatar_bridge.png", class: "card_amikeco_avatar" %>
+      </div>
+      <div class="what-is-amikeco-card-head">
+        <h3>Commonality</h3>
+      </div>
+      <div class="what-is-amikeco-card-body">
+        <p>Amikeco is a service that connects people from the community with shared interests whose paths might never have crossed. The goal is to bring a little bit more positive energy in the lives of younger and older people and with time maybe even curtail the generation gap.</p>
+      </div>
+    </div>
+
+    <div class="what-is-amikeco-card">
+      <div class="what-is-amikeco-avatar">
+        <%= image_tag "avatar_young.png", class: "card_amikeco_avatar"%>
+      </div>
+      <div class="what-is-amikeco-card-head">
+        <h3>Commonality</h3>
+      </div>
+      <p>On the other hand younger people are not always happy to call a grandmother or a grandfather their own. </p>
+    </div>
+  </div>
+
+  <div id="second-arrow-down" class="arrow-down">
+    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+  </div>
 </div>
-<div class="what-is-amikeco-image-container">
-  <img class="what-is-amikeco-avatar" src=<%= image_path "friends.png"%>>
-</div>
-</div>
+<!--      <p>
+      Harry and Hagrid, Marty and Doc, Daniel and Mr. Miyagi... What do all these people have in common? They all understand that age is just a number and quality friendships are based on more than just the age on your birth certificate. Amikeco is a service that connects people from the community with shared interests whose paths might never have crossed.
+    </p> -->
+
 
 <!-- THE SCIENCE IS IN -->
 
 <div class="science-is-in-container">
-  <div class="science-is-in-image-container">
-    <img class="science-is-in-avatar" src=<%= image_path "science.png"%>>
+
+  <div class="scienece-is-in-headline">
+    <h1><strong>The Science is in!</strong></h1>
   </div>
+  <div class="scienece-is-in-subheadline">
+    <h3>Why everyone profits from intergenerational contact</h3>
+  </div>
+
   <div class="science-is-in-content">
-   <h1><strong>The science is in!</strong></h1>
+    <div class="science-box">
+      <div class="box-icon">
+        <%= image_tag("newspaper.png", class: "icon-avatar") %>
+      </div>
+        <h3>Having regular social contact helps people live longer </h3>
+        <%= link_to(profiles_path) do %>
+          <div class="read-up-right">
+            <h4>Read up on it</h4>
+          </div>
+        <% end %>
+    </div>
+    <div class="science-box">
+      <div class="box-icon">
+        <%= image_tag("newspaper.png", class: "icon-avatar") %>
+      </div>
+        <h3>Social activites play a critical role in preserving physical and mental health</h3>
+        <%= link_to(profiles_path) do %>
+          <div class="read-up-right">
+            <h4>Read up on it</h4>
+          </div>
+        <% end %>
+    </div>
+    <div class="science-box">
+      <div class="box-icon">
+        <%= image_tag("newspaper.png", class: "icon-avatar") %>
+      </div>
+        <h3>Mature friends tell it like it is and younger pals 'pep you up'</h3>
+        <%= link_to(profiles_path) do %>
+          <div class="read-up-right">
+            <h4>Read up on it</h4>
+          </div>
+        <% end %>
+    </div>
+    <div class="science-box">
+      <div class="box-icon">
+        <%= image_tag("newspaper.png", class: "icon-avatar") %>
+      </div>
+        <h3>Intergenerational friendships are based on who your true self is</h3>
+        <%= link_to(profiles_path) do %>
+          <div class="read-up-right">
+            <h4>Read up on it</h4>
+          </div>
+        <% end %>
+    </div>
+  </div>
 
-<ul class="bridge list-unstyled">
-   <li>Having friends helps people live longer </li>
-   <li>Social activites play a critical role in preserving physical and mental health</li>
-   <li>Mature friends tell it like it is and younger pals pep you up</li>
-   <li>Intergenerational friendships are based on who you are, not where you’re at.</li>
- </ul>
-
-
- </div>
+  <div id="third-arrow-down" class="arrow-down">
+    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+  </div>
 </div>
 
 <!-- WHAT MEMBERS ARE SAYING -->
 
 <div class="testimonial-container">
-  <h4><strong>What our members are saying</strong></h4>
+  <div class="testimonial-headline">
+    <h1><strong>'A new, outstanding experience'</strong></h1>
+  </div>
+  <div class="testimonial-subheadline">
+    <h3>What our members are saying</h3>
+  </div>
   <div class="container-fluid">
     <!-- ROW 1 -->
     <div class="row">
@@ -54,7 +149,7 @@
           <img class="testimonial-avatar" src=<%= image_path "madeline.jpg"%>>
         </div>
         <div class="testimonial-content">
-          <p>"Ines is 40 years older than me and she is my best friend. Through Ines, I have learned the art of creating joy for one’s self. "</p>
+          <p>"Ines is 40 years older than me and she is my best friend. Through Ines, I have learned the art of creating joy for myself. "</p>
           <p>- <strong>Madeline</strong>, St. Georg</p>
         </div>
       </div>
@@ -95,12 +190,36 @@
       </div>
     </div>
   </div>
+  <div id="get_started_link">
+    <%= link_to search_path do %>
+      <div class="generic_button get_started_button">Get started</div>
+     <% end %>
+   </div>
 </div>
 </div>
 
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 
 
+<script>
+  document.querySelector("#first-arrow-down").addEventListener("click", function() {
+    document.querySelector('.what-is-amikeco-container').scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
 
+  document.querySelector("#second-arrow-down").addEventListener("click", function() {
+    document.querySelector('.science-is-in-container').scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
+
+  document.querySelector("#third-arrow-down").addEventListener("click", function() {
+    document.querySelector('.testimonial-container').scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
+</script>
 
 
 
