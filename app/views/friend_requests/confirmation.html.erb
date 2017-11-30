@@ -8,13 +8,12 @@
   <div class="message-wrapper">
     <div class="message-box">
 
-        <div class="confirmation-checkbox">
+        <div class="confirmation-checkbox" id="confirmation-checked">
           <i class="fa fa-check check-mark" aria-hidden="true"></i>
         </div>
 
         <div class="confirmation-message">
-        <p> <%= "Great job! You have now successfully contacted #{@friend_request.old_user.first_name}." %>
-        </p>
+        <p> <%= "1. Send introduction message to #{@friend_request.old_user.first_name}" %></p>
 
         </div>
     </div>
@@ -22,7 +21,7 @@
     <div class="message-box">
         <div class="confirmation-checkbox"></div>
         <div class="confirmation-message">
-        <p> <%= "#{@friend_request.old_user.first_name} will review your request and let you know when a decision has been made :D"  %>
+        <p> <%= "2. Wait to hear back from #{@friend_request.old_user.first_name}"  %>
         </p>
          </div>
     </div>
@@ -30,7 +29,7 @@
     <div class="message-box">
         <div class="confirmation-checkbox"></div>
         <div class="confirmation-message">
-          <p> <%= "If #{@friend_request.old_user.first_name} also think you are a good fit - meet up and have fun. If it wasn't a perfect match, try again! "  %>  </p>
+          <p> <%= "3. Plan a fun first meeting! "  %>  </p>
           <p></p>
         </div>
     </div>
@@ -45,15 +44,15 @@
       <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
     <% end %>
     <div class="dashboard-friendrequest-name">
-        <h3><%= "#{@friend_request.old_user.first_name} #{@friend_request.old_user.last_name}" %></h3>
+        <h3 id="friend-name"><%= "#{@friend_request.old_user.first_name} #{@friend_request.old_user.last_name}" %></h3>
     </div>
     <div class="dashboard-friendrequest-body">
         <p>
-          <%= @friend_request.request_message %>
+          <%= @friend_request.request_message[0..120] + "..." %>
         </p>
       </div>
       <div class="dashboard-friendrequest-status">
-        <p class="status <%=@friend_request.status%>"><%= @friend_request.status %></p>
+        <p class="status <%=@friend_request.status%>" id="pending-size"><%= @friend_request.status %></p>
       </div>
     </div>
   </div>
