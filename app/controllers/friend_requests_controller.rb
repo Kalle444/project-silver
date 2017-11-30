@@ -13,6 +13,7 @@ class FriendRequestsController < ApplicationController
     @friend_request = FriendRequest.new(friend_requests_params)
     @friend_request.young_user = current_user
     @friend_request.old_user = @profile
+    @friend_request.status = "Pending"
     @friend_request.save ? (redirect_to confirmation_profile_friend_request_path(@profile, @friend_request)) : (render :new)
   end
 
