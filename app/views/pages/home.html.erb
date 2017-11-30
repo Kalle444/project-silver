@@ -18,6 +18,9 @@
 
 <div class="what-is-amikeco-container">
   <div class="what-is-amikeco-headline">
+    <div class="title-flat">
+      <%= image_tag "bridge_flat.png", style: "width: 90px; height: 90px;", id: "bridge-flat" %>
+    </div>
     <h1><strong>Connecting people from different generations</strong></h1>
   </div>
   <div class="what-is-amikeco-subheadline">
@@ -31,9 +34,9 @@
         <%= image_tag "avatar_elderly.png", class: "card_amikeco_avatar" %>
       </div>
       <div class="what-is-amikeco-card-head">
-        <h3>Commonality</h3>
+        <h3>Enjoyment</h3>
       </div>
-      <p>After retirement many seniors lose connection to close people around them. A big amount of them would <strong>enjoy company outside of their regular routine.</strong> Someone who they could let partake in their stories and life experience.</p>
+      <p>After retirement many seniors lose connection to close people around them. A big amount of them live alone and would <strong>enjoy company</strong> outside of their regular routine.<br> Someone who they could let partake in their <strong>life experience, and share stories </strong>with.</p>
     </div>
 
     <div class="what-is-amikeco-card">
@@ -44,7 +47,7 @@
         <h3>Commonality</h3>
       </div>
       <div class="what-is-amikeco-card-body">
-        <p>Amikeco is a service that connects people from the community with shared interests whose paths might never have crossed. The goal is to bring a little bit more positive energy in the lives of younger and older people and with time maybe even curtail the generation gap.</p>
+        <p>Amikeco is a service that connects people from the community with <strong>shared interests</strong> whose paths might never have crossed. <br> The goal is to bring a little bit <strong>more positive energy</strong> in the lives of younger and older people and with time maybe even curtail the generation gap.</p>
       </div>
     </div>
 
@@ -53,9 +56,9 @@
         <%= image_tag "avatar_young.png", class: "card_amikeco_avatar"%>
       </div>
       <div class="what-is-amikeco-card-head">
-        <h3>Commonality</h3>
+        <h3>Experience</h3>
       </div>
-      <p>On the other hand younger people are not always happy to call a grandmother or a grandfather their own. </p>
+      <p>On the other hand younger people can gain a lot out of spending time with a senior. <strong>A different perspective on life and serious advise </strong>from people who have tried and achieved so many things before. And not to forget will they cheer and freshen up this person's life.</p>
     </div>
   </div>
 
@@ -73,6 +76,9 @@
 <div class="science-is-in-container">
 
   <div class="scienece-is-in-headline">
+    <div class="title-flat">
+      <%= image_tag "science_flat.png", style: "width: 100px; height: 100px;", id: "science-flat" %>
+    </div>
     <h1><strong>The Science is in!</strong></h1>
   </div>
   <div class="scienece-is-in-subheadline">
@@ -135,6 +141,9 @@
 
 <div class="testimonial-container">
   <div class="testimonial-headline">
+    <div class="title-flat">
+      <%= image_tag "teamwork_flat.png", style: "width: 90px; height: 90px;", id: "teamwork-flat" %>
+    </div>
     <h1><strong>'A new, outstanding experience'</strong></h1>
   </div>
   <div class="testimonial-subheadline">
@@ -146,22 +155,22 @@
      <div class="col-md-6">
       <div class="testimonial-card">
         <div class="testimonial-image-container">
-          <img class="testimonial-avatar" src=<%= image_path "madeline.jpg"%>>
+          <%= cl_image_tag("af5gzsooie6eyz4eqrwg.jpg", class: "testimonial-avatar", :transformation=>[{:width=>180, :height=>180, :crop=>"fill"}]) %>
         </div>
         <div class="testimonial-content">
-          <p>"Ines is 40 years older than me and she is my best friend. Through Ines, I have learned the art of creating joy for myself. "</p>
-          <p>- <strong>Madeline</strong>, St. Georg</p>
+          <p>"Mathilde is 40 years older than me and she is one of my very good friends that I met through amikeco. She is a great chess player and we meet up to play every month. "</p>
+          <p>- <strong>Karl</strong>, Copenhagen</p>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="testimonial-card">
         <div class="testimonial-image-container">
-          <img class="testimonial-avatar" src=<%= image_path "peter.jpg"%>>
+          <%= cl_image_tag("nq4svbqtwuylmcoqyt9a.jpg", class: "testimonial-avatar", :transformation=>[{:width=>180, :height=>180, :crop=>"fill"}]) %>
         </div>
         <div class="testimonial-content">
           <p>"I am not much of a talker and spending time with Oliver has been a great pleasure; he’s a sweet lad.”</p>
-          <p>- <strong>Peter</strong>, Hellerup</p>
+          <p>- <strong>Christopher</strong>, Hellerup</p>
         </div>
       </div>
     </div>
@@ -169,22 +178,22 @@
     <div class="col-md-6">
       <div class="testimonial-card">
         <div class="testimonial-image-container">
-          <img class="testimonial-avatar" src=<%= image_path "cj.jpg"%>>
+          <%= cl_image_tag("zzqskhxcfj91ufttp6te.jpg", class: "testimonial-avatar", :transformation=>[{:width=>180, :height=>180, :crop=>"fill"}]) %>
         </div>
         <div class="testimonial-content">
           <p>"I love Amikeco! Choosing to sign up was one of the best decisions of my life"</p>
-          <p>- <strong>Christopher</strong>, Frederiksberg</p>
+          <p>- <strong>Oscar</strong>, Frederiksberg</p>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="testimonial-card">
         <div class="testimonial-image-container">
-          <img class="testimonial-avatar" src=<%= image_path "ingrid.jpg"%>>
+          <%= cl_image_tag("sckfrpp6bqsm67rkhq7s.jpg", class: "testimonial-avatar", :transformation=>[{:width=>180, :height=>180, :crop=>"fill"}]) %>
         </div>
         <div class="testimonial-content">
           <p>"Although Katrina is only 26, she is easy to open up to because she takes everything in, and doesn't offer solutions, which is perfect for me."</p>
-          <p>- <strong>Ilsa</strong>
+          <p>- <strong>Leonora</strong>
           , Neustadt</p>
         </div>
       </div>

@@ -40,11 +40,11 @@
 }
 
 #second-arrow-down {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 #third-arrow-down {
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 // WHAT IS AMIKECO
@@ -54,7 +54,7 @@
   // justify-content: space-around;
   overflow: hidden;
   height: 100vh;
-  min-height: 750px;
+  min-height: 781px;
   min-width: 1300px;
   background-color: #FFF3F0;
   h1 {
@@ -67,6 +67,11 @@
   padding-top: 30px;
   background-color: $primary-hover;
   color: white;
+  position: relative;
+}
+
+#bridge-flat {
+  margin-top: 20px;
 }
 
 .what-is-amikeco-subheadline {
@@ -93,7 +98,11 @@
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
   padding: 30px 20px;
   p {
+    text-align: justify;
     font-size: 16px;
+    strong {
+      color: $secondary-hover;
+    }
   }
 }
 
@@ -110,7 +119,7 @@
 
 .what-is-amikeco-card-head {
   text-align: center;
-  color: $secondary;
+  color: $primary-hover;
   margin-bottom: 15px;
 }
 
@@ -142,6 +151,23 @@
   padding-top: 30px;
   background-color: $secondary;
   color: white;
+  position: relative;
+}
+
+.title-flat {
+  text-align: center;
+  background-color: white;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  border-radius: 50%;
+  left: 20px;
+  top: 15px;
+  box-shadow: 0 0 7px rgba(0,0,0,0.5);
+}
+
+#science-flat {
+  margin-top: 10px;
 }
 
 .scienece-is-in-subheadline {
@@ -232,6 +258,11 @@
   padding-top: 30px;
   background-color: $primary-hover;
   color: white;
+  position: relative;
+}
+
+#teamwork-flat {
+  margin-top: 15px;
 }
 
 .testimonial-subheadline {
