@@ -9,7 +9,7 @@
             <% else %>
                 <% avatar_url = "face_dsncrt.jpg"  %>
             <% end %>
-    <%= cl_image_tag avatar_url, class: "avatar-Xlarge dashboard-profile-img" %>
+    <%= cl_image_tag avatar_url, class: "avatar-Xlarge dashboard-profile-img", style: "box-shadow: 0 0 9px rgba(0,0,0,0.6);", :transformation=>[{:width=>200, :height=>200, :crop=>"fill"}] %>
   </div>
 
   <div class="dashboard-profile_info">
