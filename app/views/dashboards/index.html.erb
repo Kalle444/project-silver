@@ -40,7 +40,7 @@
 
 <div class="userprofile-information">
   <div class="padding-left">
-    <h4>My friend requests</h4>
+    <h4>My friend requests:</h4>
   </div>
     <% current_user.friend_requests_as_young_user.each do |fr| %>
     <% old_user = User.find(fr.old_user_id) %>
