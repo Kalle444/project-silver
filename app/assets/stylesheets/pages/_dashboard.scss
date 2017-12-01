@@ -23,7 +23,6 @@
   padding: 15px 0 15px 15px;
   min-height: 260px;
   display: flex;
-  // justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
@@ -100,7 +99,6 @@
 }
 .dashboard-friendrequest-name h3 {
   font-size: 17px;
-  // color: $font-dark;
   margin: 0 0 0 25px;
   width: 130px;
   text-decoration: none;
@@ -114,9 +112,6 @@
 .dashboard-friendrequest-body p {
   font-size: 15px;
   font-weight: lighter;
-  // color: $font-dark;
-
-  // opacity: 0.6;
   margin: none;
   padding: 0 30px;
 
@@ -126,7 +121,6 @@
   flex-grow: 1;
   font-size: 13px;
   padding-right: 20px;
-  // color: rgba(0,0,0,0.4);
 }
 .dashboard-friendrequest-body strong{
   // color: rgba(0,0,0,0.9);
