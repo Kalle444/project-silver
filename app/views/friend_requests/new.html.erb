@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <div class="friend_request-form">
+      <div class="friend-request-form">
       <h2 class="form-headline"><%= " Write a nice message for #{@profile.first_name
 }" %> </h2>
       <%= simple_form_for [@profile, @friend_request], url: profile_friend_requests_path(@profile)  do |f| %>
@@ -9,6 +9,25 @@
           <textarea class="form-control text required form-box-height-xl form-box-font-size-lg" placeholder="Let your new friend know why you want to meet" name="friend_request[request_message]" id="friend_request_request_message"></textarea></div>
         <%= f.submit "Make contact", class: "btn btn-block action-button" %>
       <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <div class="recommendation form-box-font-size-lg">
+        <div class="flexbox-container">
+          <div>
+            <%= image_tag("greenface.png", class: "image-tag-recom") %>
+          </div>
+          <p>"Hi Stephen, I found it super amazing, that you are an Elvis Presley fan, he is my favorite artist. There is this Rock'n'Roll club in Nørrebro, maybe you want to come check it out with me next Saturday? Best regards, Timothy"</p>
+        </div>
+
+        <div class="flexbox-container">
+          <div>
+            <%= image_tag("redface.png", class: "image-tag-recom") %>
+          </div>
+          <p>"Hi, can I have a job?"</p>
+        </div>
       </div>
     </div>
   </div>
