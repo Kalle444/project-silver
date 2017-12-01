@@ -150,16 +150,16 @@ UserInterest.create(user: karl, interest: golf)
 UserInterest.create(user: karl, interest: chess)
 UserInterest.create(user: karl, interest: board_games)
 
-UserInterest.create(user: christopher, interest: baking)
 UserInterest.create(user: christopher, interest: movies)
+UserInterest.create(user: christopher, interest: baking)
 UserInterest.create(user: christopher, interest: gardening)
 UserInterest.create(user: christopher, interest: chess)
 UserInterest.create(user: christopher, interest: art)
 
+UserInterest.create(user: sarah, interest: baking)
 UserInterest.create(user: sarah, interest: art)
 UserInterest.create(user: sarah, interest: singing)
 UserInterest.create(user: sarah, interest: cooking)
-UserInterest.create(user: sarah, interest: baking)
 UserInterest.create(user: sarah, interest: rock_and_roll)
 
 UserInterest.create(user: mette, interest: bowling)
@@ -171,16 +171,16 @@ UserInterest.create(user: leonore, interest: piano)
 UserInterest.create(user: leonore, interest: board_games)
 UserInterest.create(user: leonore, interest: movies)
 
+UserInterest.create(user: mathilde, interest: rock_and_roll)
 UserInterest.create(user: mathilde, interest: movies)
 UserInterest.create(user: mathilde, interest: gardening)
 UserInterest.create(user: mathilde, interest: golf)
-UserInterest.create(user: mathilde, interest: rock_and_roll)
 
+UserInterest.create(user: sunny, interest: board_games)
 UserInterest.create(user: sunny, interest: bowling)
 UserInterest.create(user: sunny, interest: art)
 UserInterest.create(user: sunny, interest: singing)
 UserInterest.create(user: sunny, interest: soccer)
-UserInterest.create(user: sunny, interest: board_games)
 UserInterest.create(user: sunny, interest: baking)
 
 UserInterest.create(user: john, interest: soccer)
@@ -189,8 +189,8 @@ UserInterest.create(user: john, interest: rock_and_roll)
 UserInterest.create(user: john, interest: golf)
 UserInterest.create(user: john, interest: board_games)
 
-UserInterest.create(user: fatima, interest: board_games)
 UserInterest.create(user: fatima, interest: chess)
+UserInterest.create(user: fatima, interest: board_games)
 
 UserInterest.create(user: oscar, interest: art)
 UserInterest.create(user: oscar, interest: singing)
@@ -200,16 +200,16 @@ UserInterest.create(user: oscar, interest: rock_and_roll)
 
 #--------HAMBURG--USER--INTERESTS----------------------------
 
+UserInterest.create(user: stefan, interest: piano)
 UserInterest.create(user: stefan, interest: baking)
 UserInterest.create(user: stefan, interest: chess)
 UserInterest.create(user: stefan, interest: rock_and_roll)
-UserInterest.create(user: stefan, interest: piano)
 UserInterest.create(user: stefan, interest: art)
 UserInterest.create(user: stefan, interest: singing)
 
+UserInterest.create(user: patrice, interest: gardening)
 UserInterest.create(user: patrice, interest: baking)
 UserInterest.create(user: patrice, interest: cooking)
-UserInterest.create(user: patrice, interest: gardening)
 UserInterest.create(user: patrice, interest: dogs)
 UserInterest.create(user: patrice, interest: art)
 
@@ -219,8 +219,8 @@ UserInterest.create(user: mesut, interest: cooking)
 UserInterest.create(user: mesut, interest: piano)
 UserInterest.create(user: mesut, interest: rock_and_roll)
 
-UserInterest.create(user: ilsa, interest: bowling)
 UserInterest.create(user: ilsa, interest: dogs)
+UserInterest.create(user: ilsa, interest: bowling)
 UserInterest.create(user: ilsa, interest: board_games)
 
 UserInterest.create(user: emma, interest: classical_music)
