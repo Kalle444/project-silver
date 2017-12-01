@@ -21,7 +21,7 @@ karl = User.create(first_name: "Karl", last_name: "Bergstrom", email: "karl@gmai
 # ----------------OLD USERS--COPENHAGEN--------------------------------
 
 christopher = User.create(first_name: "Christopher", last_name: "Washington", email: "christopher@gmail.com", password: "123456",
-  bio: "Born in 1950 in Aarhus, I eventually relocated to Copenhagen, where I took my comedic talents to Politiken and wrote a weekly humorous advice column. In 1995, I decided to slow things down and retired. I bought a farm in Jylland and I regularly take trips over on the weekends.",
+  bio: "Born 1950 in Aarhus, I eventually relocated to Copenhagen, where I took my comedic talents to Politiken and wrote a weekly humorous advice column. In 1995, I decided to slow things down and retired. I bought a farm in Jylland and I regularly take trips over on the weekends.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Thorsgade 55, 2200 København N",
   young: false,
@@ -29,14 +29,14 @@ christopher = User.create(first_name: "Christopher", last_name: "Washington", em
 ")
 
 sarah = User.create(first_name: "Sarah", last_name: "Knudsen", email: "sarah@gmail.com", password: "123456",
-  bio: "I was born March 27, 1950, in Nørrebro, Copenhagen. I began taking sewing lessons at the age of 15. At 18 I started working in one of the sewing factories in Copenhagen. I have been part of developing fabric to some of the most famous Danish design furniture. Now I am retired and enjoy baking and cooking.",
+  bio: "I was born March 27, 1950, in Nørrebro, Copenhagen. I began taking sewing lessons at the age of 15. At 18 I started working in one of the sewing factories in Copenhagen. I have been part of developing fabric to some of the most famous Danish design furniture. I am now retired and enjoy baking and cooking.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Septembervej 74-118, 2730 Herlev",
   young: false,
   profile_picture_url: "https://images.pexels.com/photos/432722/pexels-photo-432722.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
 
 mette = User.create(first_name: "Mette", last_name: "Larsen", email: "mette@gmail.com", password: "123456",
-  bio: "Born in Humlebæk in 1931, I began making television variety shows in the 1950s. From 1969 to 1970, I hosted a TV talk show called 'Vild med dans', and went on to appear in many other series over the decades, including Sanford and Son and Picket Fences. In 1987, I was nominated for a Danish gospel music Grammy Award (best female soloist)",
+  bio: "Born in Humlebæk in 1931, I began making television variety shows in the 1950s. From 1969 to 1970, I hosted a TV show called 'Vild med dans', and went on to appear in many other series over the decades, including Sanford and Son and Picket Fences. In 1987, I was nominated for a Danish gospel music Grammy Award (best female soloist)",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Vordingborggade 37-35, 2100 København Ø",
   young: false,
@@ -58,7 +58,7 @@ mathilde = User.create(first_name: "Mathilde", last_name: "Hesse", email: "mathi
 
 sunny = User.create(first_name: "Sunny", last_name: "Nguyen", email: "sunny@gmail.com", password: "123456",
   bio: "Born in Yangon, Myanmar, in 1945, I spent much of my early adult years abroad before returning home and becoming an activist against the brutal rule of dictator U Ne Win. I was placed under house arrest in 1989 and spent 15 of the next 21 years in custody. I was finally released from house arrest in November 2010 and moved to Danmark together with exhusband.",
-  motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
+  motivation: "I think that young and old people has so much to offer each other. I would love to share my life experiences with a younger person and at the same time learn about what goes on in a younger persons life. It is definitely a win win situations. If we can play board games at the same time, even better",
   location: "Kristianiagade 16, 2100 København Ø",
   young: false,
   profile_picture_url: "https://ak5.picdn.net/shutterstock/videos/12335255/thumb/1.jpg?i10c=img.resize(height:160)")
@@ -78,7 +78,7 @@ fatima = User.create(first_name: "Fatima", last_name: "Portakal", email: "fatima
   profile_picture_url: "http://turkishtravelblog.com/wp-content/uploads/2012/06/Maral-woman.jpg")
 
 oscar = User.create(first_name: "Oscar", last_name: "von Sydow", email: "oscar@gmail.com", password: "123456",
-  bio: "I have spent most of my life as a traveling sales man, and it is during these years that I developed my taste for Rock and Roll and Elvis Presley. I would always put an Elvis record on during my long travels. I live an active life and enjoy going out dancing and frequently visits concerts. ",
+  bio: "I have spent most of my life as a travelling sales man, and it is during these years that I developed my taste for Rock and Roll and Elvis Presley. I would always put an Elvis record on during my long var car rides. I live an active life and enjoy going out dancing and frequently visit concerts.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Sigurdsgade 26, 2200 København N",
   young: false,
