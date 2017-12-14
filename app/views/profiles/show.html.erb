@@ -5,12 +5,12 @@
   <div class="userprofile-avatar-wrapper">
     <h2><%= "#{@profile.first_name} #{@profile.last_name}" %></h2>
     <div class="userprofile-avatar">
-      <% if @profile.profile_picture %>
+<!--       <% if @profile.profile_picture %>
                   <% avatar_url = @profile.profile_picture.path %>
               <% else %>
                   <% avatar_url = "face_dsncrt.jpg"  %>
-              <% end %>
-      <%= cl_image_tag avatar_url, class: "avatar-XXlarge", style: "box-shadow: 0 0 9px rgba(0,0,0,0.6);", :transformation=>[{:width=>280, :height=>280, :crop=>"fill"}] %>
+              <% end %> -->
+      <%= cl_image_tag "superman_zdlddt.jpg", class: "avatar-XXlarge", style: "box-shadow: 0 0 9px rgba(0,0,0,0.6);", :transformation=>[{:width=>280, :height=>280, :crop=>"fill"}] %>
     </div>
 </div>
 

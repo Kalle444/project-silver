@@ -37,12 +37,15 @@
 
   <div class="friend-request-box">
     <div class="dashboard-friendrequest">
+      <%= cl_image_tag("superman_zdlddt.jpg", class: "avatar-medium", :transformation=>[{:width=>50, :height=>50, :crop=>"fill"}]) %>
+
+<!--
     <% if @friend_request.old_user.profile_picture? %>
       <%= cl_image_tag @friend_request.old_user.profile_picture.path, class: "avatar-medium", transformation: [
                         {width: 50, height: 50, crop: "fill"}]  %>
     <% else %>
       <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-    <% end %>
+    <% end %> -->
     <div class="dashboard-friendrequest-name">
         <h3 id="friend-name"><%= "#{@friend_request.old_user.first_name} #{@friend_request.old_user.last_name}" %></h3>
     </div>
