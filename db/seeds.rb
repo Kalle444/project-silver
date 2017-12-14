@@ -14,7 +14,8 @@ karl = User.create(first_name: "Karl", last_name: "Bergstrom", email: "karl@gmai
   bio: "I am a 29 year old Swedish guy that recently moved to Copenhagen to study web development at the bootcamp Le Wagon. I am a big fan of soccer and like to watch as many game as I possible can find time for. When I am not watching soccer you can either find me on the golf course or playing games with my friends. I like to travel and I have lived in several different countries during  my five years of studies (Sweden, Canada, South Korea, Netherlands, Australia, Singapore). I speak Swedish, Danish and English so I am sure we can find a way to communicate. I am an easy going guy that loves meeting new people.",
   motivation: "I recently moved to Copenhagen from my home town Västerås. Sadly my friends and family are still in Västerås leaving me to find new friends here in Copenhagen. I have always spent a lot of time with my grandparents and since moving away I am really missing their company. I think it is so important for people to socialise across generations as we have so much to learn from each other. I am a guy with lots of energy that enjoy a good game of golf or why not a game of chess. I am hoping to meet some new friends here on Amikeco so don’t hesitate to get in touch!",
   location: "Nørrebrogade 174, 2200 København N",
-  profile_picture_url: "http://res.cloudinary.com/karlbergstrom/image/upload/v1512056189/af5gzsooie6eyz4eqrwg.jpg")
+  profile_picture_url: "https://res.cloudinary.com/karlbergstrom/image/upload/v1512140451/ka0sb9cwiqme0odhldzg.jpg")
+
 
 # ----------------OLD USERS--------------------------------------------
 
@@ -24,65 +25,64 @@ christopher = User.create(first_name: "Christopher", last_name: "Washington", em
   bio: "Born 1950 in Aarhus, I eventually relocated to Copenhagen, where I took my comedic talents to Politiken and wrote a weekly humorous advice column. In 1995, I decided to slow things down and retired. I bought a farm in Jylland and I regularly take trips over on the weekends.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Thorsgade 55, 2200 København N",
-  young: false,
-  profile_picture_url: "https://images.pexels.com/photos/160020/pexels-photo-160020.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb
-")
+  young: false)
+  # profile_picture_url: "https://images.pexels.com/photos/160020/pexels-photo-160020.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
 
 sarah = User.create(first_name: "Sarah", last_name: "Knudsen", email: "sarah@gmail.com", password: "123456",
   bio: "I was born March 27, 1950, in Nørrebro, Copenhagen. I began taking sewing lessons at the age of 15. At 18 I started working in one of the sewing factories in Copenhagen. I have been part of developing fabric to some of the most famous Danish design furniture. I am now retired and enjoy baking and cooking.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Septembervej 74-118, 2730 Herlev",
-  young: false,
-  profile_picture_url: "https://images.pexels.com/photos/432722/pexels-photo-432722.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
+  young: false)
+  # profile_picture_url: "https://images.pexels.com/photos/432722/pexels-photo-432722.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
 
 mette = User.create(first_name: "Mette", last_name: "Larsen", email: "mette@gmail.com", password: "123456",
   bio: "Born in Humlebæk in 1931, I began making television variety shows in the 1950s. From 1969 to 1970, I hosted a TV show called 'Vild med dans', and went on to appear in many other series over the decades, including Sanford and Son and Picket Fences. In 1987, I was nominated for a Danish gospel music Grammy Award (best female soloist)",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Vordingborggade 37-35, 2100 København Ø",
-  young: false,
-  profile_picture_url: "https://image1.masterfile.com/getImage/NjAwLTAwOTgzODE3ZW4uMDAwMDAwMDA=ABffkH/600-00983817en_Masterfile.jpg")
+  young: false)
+  # profile_picture_url: "https://image1.masterfile.com/getImage/NjAwLTAwOTgzODE3ZW4uMDAwMDAwMDA=ABffkH/600-00983817en_Masterfile.jpg")
 
 leonore = User.create(first_name: "Leonore", last_name: "Costello", email: "leonore@gmail.com", password: "123456",
   bio: "I was born on October 8, 1941, in Odense. While an undergraduate, I became involved in the civil rights movement. In 1965, I went to Selma, Alabama, to march with Dr. Martin Luther King Jr. In the 1980s, I became a leading national spokesman for womens movement in Denmark. I was later appointed special award for my achiviements in the female rights movement",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Holbergsgade 19-11, 1057 København K",
-  young: false,
-  profile_picture_url: "http://art-sheep.com/wp-content/uploads/2015/04/tattooed-seniors-elderly-28.jpg")
+  young: false)
+  # profile_picture_url: "http://art-sheep.com/wp-content/uploads/2015/04/tattooed-seniors-elderly-28.jpg")
 
 mathilde = User.create(first_name: "Mathilde", last_name: "Hesse", email: "mathilde@gmail.com", password: "123456",
   bio: "I was born in Hamburg, West Germany, on July 17, 1954. Trained as a physicist, I entered politics after the 1989 fall of the Berlin Wall. I moved to Denmark and got involved in the political landscape. Rising to the position of chairwoman of the Radical Venstre party, I eventually became  one of the leading figures of the European Union, following the 2005 national elections.",
   motivation: "I am a grandmother of four and always really enjoyed their company. But since I have to run a whole fucking country, they decided to move away from my 'Mutti' instintcs. That is why I would love to spend some time with an innocent human being.",
   location: "Kristen Bernikows Gade 13-1, 1100 København K",
-  young: false,
-  profile_picture_url: "https://pbs.twimg.com/media/BnXSEwjCAAE2cUW.jpg")
+  young: false)
+  # profile_picture_url: "https://pbs.twimg.com/media/BnXSEwjCAAE2cUW.jpg")
 
 sunny = User.create(first_name: "Sunny", last_name: "Nguyen", email: "sunny@gmail.com", password: "123456",
   bio: "Born in Yangon, Myanmar, in 1945, I spent much of my early adult years abroad before returning home and becoming an activist against the brutal rule of dictator U Ne Win. I was placed under house arrest in 1989 and spent 15 of the next 21 years in custody. I was finally released from house arrest in November 2010 and moved to Danmark together with exhusband.",
   motivation: "I think that young and old people has so much to offer each other. I would love to share my life experiences with a younger person and at the same time learn about what goes on in a younger persons life. It is definitely a win win situations. If we can play board games at the same time, even better",
   location: "Kristianiagade 16, 2100 København Ø",
-  young: false,
-  profile_picture_url: "https://ak5.picdn.net/shutterstock/videos/12335255/thumb/1.jpg?i10c=img.resize(height:160)")
+  young: false)
+  # profile_picture_url: "https://ak5.picdn.net/shutterstock/videos/12335255/thumb/1.jpg?i10c=img.resize(height:160)")
 
 john = User.create(first_name: "John", last_name: "Strauss", email: "john@gmail.com", password: "123456",
   bio: "I was born on June 22, 1949, in Västerås, Sweden. I began my career as an actor on the Stockholm stage in the late 1960s and appeared in several productions. I transitioned to television in the 1970s and soon I began landing major roles. In the late 80s I moved to Copenhagen to be closer to my grandchildren and I am currently staring in Det Ny Teater's production of Annie Get Your Gun.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Indre By, Copenhagen",
-  young: false,
-  profile_picture_url: "https://images.pexels.com/photos/53159/man-old-fisherman-portrait-53159.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
+  young: false)
+  # profile_picture_url: "https://images.pexels.com/photos/53159/man-old-fisherman-portrait-53159.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
 
 fatima = User.create(first_name: "Fatima", last_name: "Portakal", email: "fatima@gmail.com", password: "123456",
   bio: "Born in 1944 in Istanbul, Turkey, I early started to work in the restaurant industry after spending my childhood cooking together with my father. I went on to study culinary studies at Istanbul State University, later also teahcing at the school. In 1981, I started working my way around Europe, finally ending up in Denmark where I decided to settle. I have worked as a chef in several different Danish kitchens",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Sjællandsgade 11, 2200 København N",
-  young: false,
-  profile_picture_url: "http://turkishtravelblog.com/wp-content/uploads/2012/06/Maral-woman.jpg")
+  young: false)
+  # profile_picture_url: "http://turkishtravelblog.com/wp-content/uploads/2012/06/Maral-woman.jpg")
 
 oscar = User.create(first_name: "Oscar", last_name: "von Sydow", email: "oscar@gmail.com", password: "123456",
   bio: "I have spent most of my life as a travelling sales man, and it is during these years that I developed my taste for Rock and Roll and Elvis Presley. I would always put an Elvis record on during my long var car rides. I live an active life and enjoy going out dancing and frequently visit concerts.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Sigurdsgade 26, 2200 København N",
-  young: false,
-  profile_picture_url: "http://sqwanjia.net/data/out/92/39490887-old-people.jpg")
+  young: false)
+  # profile_picture_url: "http://sqwanjia.net/data/out/92/39490887-old-people.jpg")
 
 
 # ----------------OLD USERS---HAMBURG--------------------------------------
@@ -91,36 +91,36 @@ stefan = User.create(first_name: "Stefan", last_name: "Borgnon", email: "stefan@
   bio: "Born in France in 1940. My father was a travelling sales person, this meant that our family moved every third year ever since I was five years old. I have learnt to appreciate the beauty of cultures and I am passionate about learning languages. I speak French, German, Spanish and English. I would love to meet someone with the same facination for languages ",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Poststraße 12, 20354 Hamburg, Germany",
-  young: false,
-  profile_picture_url: "http://farm4.static.flickr.com/3219/2281588072_7475ff752a.jpg")
+  young: false)
+  # profile_picture_url: "http://farm4.static.flickr.com/3219/2281588072_7475ff752a.jpg")
 
 patrice = User.create(first_name: "Patrice", last_name: "Okafor", email: "patrice@gmail.com", password: "123456",
   bio: "I was born in Hamburg,  August 12, 1950. Trained as an engineer I went on to work for Mercedes Bens designing engines. I have always had a facination for cars myself and I am an owner of several veteran cars that I spend most of my retired life caring for.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Hohe Bleichen 13, 20354 Hamburg, Germany",
-  young: false,
-  profile_picture_url: "https://thoughtcatalog.files.wordpress.com/2014/08/shutterstock_27256408.jpg?w=786&h=524")
+  young: false)
+  # profile_picture_url: "https://thoughtcatalog.files.wordpress.com/2014/08/shutterstock_27256408.jpg?w=786&h=524")
 
 mesut = User.create(first_name: "Mesut", last_name: "Ekmekci", email: "mesut@gmail.com", password: "123456",
   bio: "I was born October 8, 1941, in Alanya, Turkey. While an master student, I became involved in the LGBT movement. In 1965, I went to Chicago, to march with Mr Markus. In the 1980s, I became a leading national spokesman for Turkish LGBT association.",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Jungfernstieg 38, 20354 Hamburg, Germany",
-  young: false,
-  profile_picture_url: "https://dosambr.files.wordpress.com/2010/12/308914493_2a2d7a14c91.jpg")
+  young: false)
+  # profile_picture_url: "https://dosambr.files.wordpress.com/2010/12/308914493_2a2d7a14c91.jpg")
 
 ilsa = User.create(first_name: "Ilsa", last_name: "Hanson", email: "ilsa@gmail.com", password: "123456",
   bio: "I was born on June 22, 1949, in Berlin where I spent most of my life working in a nursery home. I have always enjoyed caring for people and I have three beautiful kids and eight grandchildren. They all still live in Berlin and I miss them dearly.  ",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Neuer Wall 64, 20354 Hamburg, Germany",
-  young: false,
-  profile_picture_url: "http://www.nursinghomecare.ie/wp-content/uploads/happy-old-lady.jpg")
+  young: false)
+  # profile_picture_url: "http://www.nursinghomecare.ie/wp-content/uploads/happy-old-lady.jpg")
 
 emma = User.create(first_name: "Emma", last_name: "Müller", email: "emma@gmail.com", password: "123456",
   bio: "Born and raised in the central parts of Hamburg. I have always loved classical music. I loved it so much that I got myself a job at the royal opera as a costume artist. I still really enjoy watching an opera or a musical piece and would be very happy to meet a person that shares my interests",
   motivation: "Recently, my grandchildren have moved way to America and I have been missing their presence in my day to day life. In my old age I have become more of a homebody than I would like and I find the excitement and energy of young people very inspiring.",
   location: "Große Bleichen 23, 20354 Hamburg, Germany",
-  young: false,
-  profile_picture_url: "http://www.advanced.style/media/IMG_0954.jpg")
+  young: false)
+  # profile_picture_url: "http://www.advanced.style/media/IMG_0954.jpg")
 
 
 #------------------------------------------------Interests----------------------------------------------------

@@ -7,7 +7,7 @@
               <div class="position-relative">
               <div class="blurry">
                 <div class="profile-banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path ("interest_wallpaper_compressed/" + profile.user_interests.first.interest.name.downcase + ".jpg").gsub(" ", "_")%>);"></div></div>
-                <%= cl_image_tag profile.profile_picture.path, class: "profile-avatar", :transformation=>[
+                <%= cl_image_tag "superman_zdlddt.jpg", class: "profile-avatar", :transformation=>[
                     {:width=>150, :height=>150, :crop=>"fill"}] %>
               </div>
               <div class="profile-content">

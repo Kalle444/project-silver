@@ -25,7 +25,7 @@
               <% if current_user.profile_picture %>
                   <% avatar_url = current_user.profile_picture.path %>
               <% else %>
-                  <% avatar_url = "face_dsncrt.jpg"  %>
+                  <% avatar_url = "iron-man_aae3bd.png"  %>
               <% end %>
               <%= cl_image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-silver-menu", style: "box-shadow: 0 0 9px rgba(0,0,0,0.6);", :transformation=>[{:width=>45, :height=>45, :crop=>"fill"}] %>
           <% end %>

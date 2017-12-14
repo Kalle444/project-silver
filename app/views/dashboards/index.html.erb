@@ -7,7 +7,7 @@
     <% if current_user.profile_picture %>
                 <% avatar_url = current_user.profile_picture.path %>
             <% else %>
-                <% avatar_url = "face_dsncrt.jpg"  %>
+                <% avatar_url = "batman_sniu4h.jpg"  %>
             <% end %>
     <%= cl_image_tag avatar_url, class: "avatar-Xlarge dashboard-profile-img", style: "box-shadow: 0 0 9px rgba(0,0,0,0.6);", :transformation=>[{:width=>200, :height=>200, :crop=>"fill"}] %>
   </div>
@@ -46,12 +46,12 @@
     <% old_user = User.find(fr.old_user_id) %>
     <div class="dashboard-friendrequest">
       <%= link_to(profile_path(old_user)) do %>
-        <% if old_user.profile_picture? %>
-          <%= cl_image_tag old_user.profile_picture.path, class: "avatar-medium", transformation: [
+          <%= cl_image_tag "superman_zdlddt.jpg", class: "avatar-medium", transformation: [
                       {width: 50, height: 50, crop: "fill"}]  %>
+<!--         <% if old_user.profile_picture? %>
         <% else %>
           <img class="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-        <% end %>
+        <% end %> -->
       <% end %>
       <%= link_to(profile_path(old_user)) do %>
         <div class="dashboard-friendrequest-name">
